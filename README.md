@@ -1,6 +1,6 @@
 # Modern Turbo Pascal UI Themes
 
-A collection of color themes inspired by Borland Turbo Pascal, available for multiple IDEs and terminals. Features both the original Borland Turbo Pascal color scheme and a modern Nord-inspired variant.
+A collection of color themes inspired by Borland Turbo Pascal, available for multiple IDEs and terminals. Features both the original Borland Turbo Pascal color scheme and a modern Nord-inspired variant. High contrast, readable, and perfect for long coding sessions.
 
 ## 🎨 Theme Variants
 
@@ -186,11 +186,15 @@ Test files are included in the `testfiles/` directory covering various programmi
 
 ## 📝 License
 
-[Add your license here]
+MIT License - see [LICENSE](LICENSE) for details. Documentation is licensed under Creative Commons BY-NC-ND 4.0 - see [CONTENT-LICENSE.md](CONTENT-LICENSE.md) for details.
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+- [GitHub Repository](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme)
+- [Report Issues](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme/issues)
+- [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=jonathansolarz.modern-turbo-pascal-ui)
 
 ## 📚 References
 

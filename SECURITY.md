@@ -10,7 +10,7 @@ We release patches for security vulnerabilities. Which versions are eligible for
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability, please send an email to [security@example.com] with the following information:
+If you discover a security vulnerability, please report it via [GitHub Issues](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme/issues) or send an email with the following information:
 
 - Description of the vulnerability
 - Steps to reproduce

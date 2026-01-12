@@ -1,5 +1,9 @@
 # Windows Terminal Themes
 
+Nostalgic Turbo Pascal color themes for Windows Terminal - featuring both the classic Borland Turbo Pascal aesthetic and a modern Nord-inspired variant. High contrast, readable, and perfect for long coding sessions.
+
+Part of the [Modern Turbo Pascal UI](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme) theme collection.
+
 ## Installation
 
 1. Open Windows Terminal
@@ -66,3 +70,9 @@
 
 6. Save the file
 7. In your profile settings, set `"colorScheme": "Nord Turbo Pascal Modern"` or `"colorScheme": "Borland Turbo Pascal Original"`
+
+## Repository
+
+- [GitHub Repository](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme)
+- [Report Issues](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme/issues)
+- [Full Documentation](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme#readme)

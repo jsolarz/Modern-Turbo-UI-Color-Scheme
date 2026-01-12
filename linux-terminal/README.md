@@ -1,5 +1,9 @@
 # Linux Terminal Themes
 
+Nostalgic Turbo Pascal color themes for Linux terminals - featuring both the classic Borland Turbo Pascal aesthetic and a modern Nord-inspired variant. High contrast, readable, and perfect for long coding sessions.
+
+Part of the [Modern Turbo Pascal UI](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme) theme collection.
+
 ## Shell Scripts (.sh)
 
 ### Usage
@@ -90,3 +94,9 @@ Edit `~/.config/terminator/config`:
 Use `dconf` or the GUI:
 - Settings → Profiles → Colors
 - Set color palette to custom and enter the hex values
+
+## Repository
+
+- [GitHub Repository](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme)
+- [Report Issues](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme/issues)
+- [Full Documentation](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme#readme)

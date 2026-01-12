@@ -1,6 +1,9 @@
-# Contributing to this repository
+# Contributing to Modern Turbo Pascal UI
 
-Thank you for your interest in contributing to the Documentation Toolkit! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to Modern Turbo Pascal UI! This document provides guidelines and instructions for contributing.
+
+- [GitHub Repository](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme)
+- [Report Issues](https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme/issues)
 
 ## Code of Conduct
 
