@@ -1,0 +1,10 @@
+name: theme-test
+version: "1.0.0"
+services:
+  web:
+    image: node:20
+    command: ["npm", "run", "start"]
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development

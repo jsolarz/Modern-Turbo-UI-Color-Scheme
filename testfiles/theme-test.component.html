@@ -1,0 +1,23 @@
+<!-- Angular Template Reference File for Theme Testing -->
+
+<section class="theme-test">
+    <h1>{{ title }}</h1>
+
+    <input #todoInput type="text" placeholder="New todo"
+        (keyup.enter)="addTodo(todoInput.value); todoInput.value = ''" />
+
+    <div class="filters">
+        <button (click)="filter = 'all'" [class.active]="filter === 'all'">All</button>
+        <button (click)="filter = 'active'" [class.active]="filter === 'active'">Active</button>
+        <button (click)="filter = 'completed'" [class.active]="filter === 'completed'">Completed</button>
+    </div>
+
+    <ul>
+        <li *ngFor="let todo of filteredTodos" [class.done]="todo.done">
+            <label>
+                <input type="checkbox" [checked]="todo.done" (change)="toggle(todo)" />
+                <span>{{ todo.title }}</span>
+            </label>
+        </li>
+    </ul>
+</section>

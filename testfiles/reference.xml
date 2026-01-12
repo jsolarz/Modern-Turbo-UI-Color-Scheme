@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <app name="ThemeTest" version="1.0">
+        <logging enabled="true" level="debug" />
+        <paths>
+            <path key="data">/var/data</path>
+        </paths>
+    </app>
+</config>

@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  validate:
+    name: Validate Theme Files
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Validate JSON files
+        run: |
+          echo "Validating JSON files..."
+          find . -name "*.json" -not -path "./node_modules/*" -not -path "./.git/*" | while read file; do
+            echo "Checking $file"
+            python3 -m json.tool "$file" > /dev/null || exit 1
+          done
+      
+      - name: Validate XML files
+        run: |
+          echo "Validating XML files..."
+          if command -v xmllint &> /dev/null; then
+            find . -name "*.xml" -o -name "*.tmTheme" -o -name "*.icls" -o -name "*.vssettings" | while read file; do
+              echo "Checking $file"
+              xmllint --noout "$file" || exit 1
+            done
+          else
+            echo "xmllint not available, skipping XML validation"
+          fi
+      
+      - name: Check file structure
+        run: |
+          echo "Checking repository structure..."
+          [ -d "vscode" ] || exit 1
+          [ -d "jetbrains" ] || exit 1
+          [ -d "vim" ] || exit 1
+          [ -d "sublime-text" ] || exit 1
+          [ -d "atom" ] || exit 1
+          [ -d "emacs" ] || exit 1
+          [ -d "linux-terminal" ] || exit 1
+          [ -d "windows-terminal" ] || exit 1
+          echo "✓ All required directories present"

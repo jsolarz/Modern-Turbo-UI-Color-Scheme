@@ -1,0 +1,23 @@
+{
+  "name": "Nord Turbo Pascal Modern",
+  "background": "#252b36",
+  "foreground": "#ECEFF4",
+  "cursorColor": "#FFD75F",
+  "selectionBackground": "#2E4A7F",
+  "black": "#1A1D2A",
+  "red": "#FF5C57",
+  "green": "#A3E68C",
+  "yellow": "#FFD75F",
+  "blue": "#88C0D0",
+  "purple": "#C27AC0",
+  "cyan": "#8BE9FD",
+  "white": "#ECEFF4",
+  "brightBlack": "#343C50",
+  "brightRed": "#FF7A73",
+  "brightGreen": "#B4F7A0",
+  "brightYellow": "#FFE28A",
+  "brightBlue": "#A0D0E6",
+  "brightPurple": "#D48AD8",
+  "brightCyan": "#A0F0FF",
+  "brightWhite": "#FFFFFF"
+}

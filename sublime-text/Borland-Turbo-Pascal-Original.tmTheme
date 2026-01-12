@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Borland Turbo Pascal Original</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#0000AA</string>
+				<key>caret</key>
+				<string>#FFFFFF</string>
+				<key>foreground</key>
+				<string>#AAAAAA</string>
+				<key>invisibles</key>
+				<string>#000088</string>
+				<key>lineHighlight</key>
+				<string>#0000CC</string>
+				<key>selection</key>
+				<string>#5555AA</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keywords</string>
+			<key>scope</key>
+			<string>keyword, storage.type, storage.modifier</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFFFFF</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Identifiers</string>
+			<key>scope</key>
+			<string>entity.name, variable</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#AAAAAA</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Strings</string>
+			<key>scope</key>
+			<string>string</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#00FFFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Numbers</string>
+			<key>scope</key>
+			<string>constant.numeric</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF00FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Comments</string>
+			<key>scope</key>
+			<string>comment</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#00FF00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Operators</string>
+			<key>scope</key>
+			<string>keyword.operator</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFFF00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Directives</string>
+			<key>scope</key>
+			<string>meta.preprocessor, keyword.control.directive</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF0000</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

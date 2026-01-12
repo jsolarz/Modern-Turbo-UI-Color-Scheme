@@ -1,0 +1,13 @@
+node_modules/
+*.vsix
+dist/
+build/
+coverage/
+.vscode-test/
+*.icls
+*.vssettings
+*.tmTheme
+*.el
+*.vim
+*.sh
+*.Xresources

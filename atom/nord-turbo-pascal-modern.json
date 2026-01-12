@@ -1,0 +1,58 @@
+{
+  "name": "Nord Turbo Pascal Modern",
+  "colors": {
+    "editor.background": "#252b36",
+    "editor.foreground": "#ECEFF4",
+    "editor.lineHighlightBackground": "#3b4252",
+    "editor.selectionBackground": "#2E4A7F",
+    "editorCursor.foreground": "#FFD75F",
+    "editorLineNumber.foreground": "#4C566A",
+    "editorWhitespace.foreground": "#4C566A"
+  },
+  "tokenColors": [
+    {
+      "name": "Keywords",
+      "scope": ["keyword", "storage.type", "storage.modifier"],
+      "settings": {
+        "foreground": "#ECEFF4",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Identifiers",
+      "scope": ["entity.name", "variable"],
+      "settings": {
+        "foreground": "#FFD75F"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": ["string"],
+      "settings": {
+        "foreground": "#88C0D0"
+      }
+    },
+    {
+      "name": "Numbers",
+      "scope": ["constant.numeric"],
+      "settings": {
+        "foreground": "#E5F6FF"
+      }
+    },
+    {
+      "name": "Comments",
+      "scope": ["comment"],
+      "settings": {
+        "foreground": "#616E88",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Directives",
+      "scope": ["meta.preprocessor", "keyword.control.directive"],
+      "settings": {
+        "foreground": "#FF5C57"
+      }
+    }
+  ]
+}

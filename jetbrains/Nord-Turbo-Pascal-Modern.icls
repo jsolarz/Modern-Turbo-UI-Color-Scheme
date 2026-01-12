@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scheme name="Nord Turbo Pascal Modern" version="142" parent_scheme="Darcula">
+  <option name="FONT_SCALE" value="1.0" />
+  <colors>
+    <option name="CARET_COLOR" value="FFD75F" />
+    <option name="CARET_ROW_COLOR" value="3b4252" />
+    <option name="CONSOLE_BACKGROUND_KEY" value="1A1D2A" />
+    <option name="LINE_NUMBERS_COLOR" value="4C566A" />
+    <option name="SELECTION_BACKGROUND" value="2E4A7F" />
+    <option name="SELECTION_FOREGROUND" value="FFFFFF" />
+    <option name="WHITESPACES" value="4C566A" />
+  </colors>
+  <attributes>
+    <option name="DEFAULT_BACKGROUND" value="252b36" />
+    <option name="DEFAULT_FOREGROUND" value="ECEFF4" />
+    <option name="DEFAULT_FONT_TYPE" value="0" />
+    <option name="TEXT_SEARCH_RESULT_ATTRIBUTES">
+      <value>
+        <option name="BACKGROUND" value="2E4A7F" />
+      </value>
+    </option>
+    <option name="SEARCH_RESULT_ATTRIBUTES">
+      <value>
+        <option name="BACKGROUND" value="2E4A7F" />
+      </value>
+    </option>
+    <option name="TEXT">
+      <value>
+        <option name="FOREGROUND" value="ECEFF4" />
+        <option name="BACKGROUND" value="252b36" />
+      </value>
+    </option>
+    <option name="KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="ECEFF4" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="FFD75F" />
+      </value>
+    </option>
+    <option name="STRING">
+      <value>
+        <option name="FOREGROUND" value="88C0D0" />
+      </value>
+    </option>
+    <option name="NUMBER">
+      <value>
+        <option name="FOREGROUND" value="E5F6FF" />
+      </value>
+    </option>
+    <option name="LINE_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="616E88" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="BLOCK_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="616E88" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="METADATA">
+      <value>
+        <option name="FOREGROUND" value="FF5C57" />
+      </value>
+    </option>
+    <option name="OPERATION_SIGN">
+      <value>
+        <option name="FOREGROUND" value="ECEFF4" />
+      </value>
+    </option>
+    <option name="BRACES">
+      <value>
+        <option name="FOREGROUND" value="ECEFF4" />
+      </value>
+    </option>
+    <option name="DOT">
+      <value>
+        <option name="FOREGROUND" value="ECEFF4" />
+      </value>
+    </option>
+    <option name="SEMICOLON">
+      <value>
+        <option name="FOREGROUND" value="ECEFF4" />
+      </value>
+    </option>
+    <option name="COMMA">
+      <value>
+        <option name="FOREGROUND" value="ECEFF4" />
+      </value>
+    </option>
+    <option name="PARENTH">
+      <value>
+        <option name="FOREGROUND" value="ECEFF4" />
+      </value>
+    </option>
+    <option name="BRACKETS">
+      <value>
+        <option name="FOREGROUND" value="ECEFF4" />
+      </value>
+    </option>
+  </attributes>
+</scheme>

@@ -1,0 +1,32 @@
+<UserSettings>
+  <ApplicationIdentity version="17.0"/>
+  <ToolsOptions>
+    <ToolsOptionsCategory name="TextEditor" RegisteredName="TextEditor">
+      <ToolsOptionsSubCategory name="C/C++" RegisteredName="C/C++" PackageName="Text Management Package">
+        <PropertyValue name="FontSize">10</PropertyValue>
+        <PropertyValue name="FontFamily">Consolas</PropertyValue>
+      </ToolsOptionsSubCategory>
+    </ToolsOptionsCategory>
+  </ToolsOptions>
+  <Category name="Environment_Group" Category="{1E5D1B8D-8943-4529-AE47-4D825C44A651}">
+    <Category name="Environment_FontsAndColors" Category="{1EDA5DD4-927A-43a7-8109-769193370203}">
+      <Category name="Text Editor" GUID="{A27B4E24-A735-4D1D-B8E7-9716E1E3D8E0}">
+        <PropertyValue name="Background">0x362B25</PropertyValue>
+        <PropertyValue name="PlainText">0xF4EFEC</PropertyValue>
+        <PropertyValue name="SelectedText">0x7F4A2E</PropertyValue>
+        <PropertyValue name="SelectedTextActive">0x7F4A2E</PropertyValue>
+        <PropertyValue name="InactiveSelectedText">0x42312B</PropertyValue>
+        <PropertyValue name="IndicatorMargin">0x362B25</PropertyValue>
+        <PropertyValue name="LineNumber">0x6A564C</PropertyValue>
+        <PropertyValue name="Keyword">0xF4EFEC</PropertyValue>
+        <PropertyValue name="Identifier">0x5FD7FF</PropertyValue>
+        <PropertyValue name="String">0xD0C088</PropertyValue>
+        <PropertyValue name="Number">0xFFF6E5</PropertyValue>
+        <PropertyValue name="Comment">0x886E61</PropertyValue>
+        <PropertyValue name="Operator">0xF4EFEC</PropertyValue>
+        <PropertyValue name="Delimiter">0xF4EFEC</PropertyValue>
+        <PropertyValue name="PreprocessorKeyword">0x575CFF</PropertyValue>
+      </Category>
+    </Category>
+  </Category>
+</UserSettings>

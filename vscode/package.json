@@ -1,0 +1,64 @@
+{
+	"name": "modern-turbo-pascal-ui",
+	"displayName": "Modern Turbo Pascal UI",
+	"description": "Nostalgic Turbo Pascal color themes for VS Code - featuring both the classic Borland Turbo Pascal aesthetic and a modern Nord-inspired variant. High contrast, readable, and perfect for long coding sessions.",
+	"version": "0.1.0",
+	"publisher": "jonathansolarz",
+	"author": {
+		"name": "Jonathan Solarz"
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme.git"
+	},
+	"bugs": {
+		"url": "https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme/issues"
+	},
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#0000AA",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"theme",
+		"color-scheme",
+		"turbo-pascal",
+		"borland",
+		"nord",
+		"dark",
+		"high-contrast",
+		"nostalgic",
+		"retro",
+		"pascal",
+		"classic"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Nord Turbo Pascal Modern",
+				"uiTheme": "vs-dark",
+				"path": "./themes/modern-nord-turbo-pascal-theme-color-theme.json"
+			},
+			{
+				"label": "Borland Turbo Pascal Original",
+				"uiTheme": "vs-dark",
+				"path": "./themes/borland-turbo-pascal-original-color-theme.json"
+			}
+		]
+	},
+	"scripts": {
+		"package": "vsce package",
+		"publish": "vsce publish"
+	},
+	"devDependencies": {
+		"@vscode/vsce": "^2.22.0"
+	}
+}

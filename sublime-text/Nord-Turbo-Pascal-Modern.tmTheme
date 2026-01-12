@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Nord Turbo Pascal Modern</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#252b36</string>
+				<key>caret</key>
+				<string>#FFD75F</string>
+				<key>foreground</key>
+				<string>#ECEFF4</string>
+				<key>invisibles</key>
+				<string>#4C566A</string>
+				<key>lineHighlight</key>
+				<string>#3b4252</string>
+				<key>selection</key>
+				<string>#2E4A7F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keywords</string>
+			<key>scope</key>
+			<string>keyword, storage.type, storage.modifier</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ECEFF4</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Identifiers</string>
+			<key>scope</key>
+			<string>entity.name, variable</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFD75F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Strings</string>
+			<key>scope</key>
+			<string>string</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#88C0D0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Numbers</string>
+			<key>scope</key>
+			<string>constant.numeric</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#E5F6FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Comments</string>
+			<key>scope</key>
+			<string>comment</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#616E88</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Directives</string>
+			<key>scope</key>
+			<string>meta.preprocessor, keyword.control.directive</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF5C57</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

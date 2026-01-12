@@ -1,0 +1,64 @@
+{
+  "name": "Borland Turbo Pascal Original",
+  "colors": {
+    "editor.background": "#0000AA",
+    "editor.foreground": "#AAAAAA",
+    "editor.lineHighlightBackground": "#0000CC",
+    "editor.selectionBackground": "#5555AA",
+    "editorCursor.foreground": "#FFFFFF",
+    "editorLineNumber.foreground": "#8888AA",
+    "editorWhitespace.foreground": "#000088"
+  },
+  "tokenColors": [
+    {
+      "name": "Keywords",
+      "scope": ["keyword", "storage.type", "storage.modifier"],
+      "settings": {
+        "foreground": "#FFFFFF",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Identifiers",
+      "scope": ["entity.name", "variable"],
+      "settings": {
+        "foreground": "#AAAAAA"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": ["string"],
+      "settings": {
+        "foreground": "#00FFFF"
+      }
+    },
+    {
+      "name": "Numbers",
+      "scope": ["constant.numeric"],
+      "settings": {
+        "foreground": "#FF00FF"
+      }
+    },
+    {
+      "name": "Comments",
+      "scope": ["comment"],
+      "settings": {
+        "foreground": "#00FF00"
+      }
+    },
+    {
+      "name": "Operators",
+      "scope": ["keyword.operator"],
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "name": "Directives",
+      "scope": ["meta.preprocessor", "keyword.control.directive"],
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    }
+  ]
+}

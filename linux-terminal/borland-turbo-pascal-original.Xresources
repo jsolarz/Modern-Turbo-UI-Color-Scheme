@@ -1,0 +1,34 @@
+! Borland Turbo Pascal Original Xresources Theme
+! Usage: xrdb -merge borland-turbo-pascal-original.Xresources
+
+! Background and foreground
+*.background: #0000AA
+*.foreground: #AAAAAA
+
+! ANSI Colors
+*.color0:  #000000
+*.color1:  #AA0000
+*.color2:  #00AA00
+*.color3:  #AAAA00
+*.color4:  #0000AA
+*.color5:  #AA00AA
+*.color6:  #00AAAA
+*.color7:  #AAAAAA
+
+! Bright ANSI Colors
+*.color8:  #555555
+*.color9:  #FF5555
+*.color10: #55FF55
+*.color11: #FFFF55
+*.color12: #5555FF
+*.color13: #FF55FF
+*.color14: #55FFFF
+*.color15: #FFFFFF
+
+! Cursor colors
+*.cursorColor: #FFFFFF
+*.cursorColor2: #0000AA
+
+! Selection colors
+*.highlightColor: #5555AA
+*.highlightTextColor: #FFFFFF

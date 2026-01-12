@@ -1,0 +1,13 @@
+{
+    "name": "theme-test",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "webpack --mode production",
+        "start": "webpack serve --mode development"
+    },
+    "dependencies": {
+        "react": "^18.0.0",
+        "typescript": "^5.0.0"
+    }
+}
