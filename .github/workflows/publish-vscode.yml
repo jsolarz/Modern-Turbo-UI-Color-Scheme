@@ -1,0 +1,59 @@
+name: Publish VS Code Extension
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Triggers on version tags like v0.1.0, v1.0.0, etc.
+  workflow_dispatch:  # Allows manual triggering from GitHub Actions UI
+    inputs:
+      version:
+        description: 'Version to publish (e.g., 0.1.0)'
+        required: true
+        type: string
+
+jobs:
+  publish:
+    name: Publish to VS Code Marketplace
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: vscode/package.json
+      
+      - name: Install dependencies
+        working-directory: ./vscode
+        run: npm ci
+      
+      - name: Validate package.json
+        working-directory: ./vscode
+        run: |
+          echo "Validating package.json..."
+          node -e "const pkg = require('./package.json'); \
+            if (!pkg.publisher) throw new Error('Missing publisher field'); \
+            if (!pkg.name) throw new Error('Missing name field'); \
+            if (!pkg.version) throw new Error('Missing version field'); \
+            console.log('✓ package.json is valid');"
+      
+      - name: Package extension
+        working-directory: ./vscode
+        run: npx @vscode/vsce package --out ./modern-turbo-pascal-ui.vsix
+      
+      - name: Publish to VS Code Marketplace
+        working-directory: ./vscode
+        run: npx @vscode/vsce publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}
+        env:
+          VSCE_PAT: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+      
+      - name: Upload VSIX artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: extension-vsix
+          path: vscode/*.vsix
+          retention-days: 30
