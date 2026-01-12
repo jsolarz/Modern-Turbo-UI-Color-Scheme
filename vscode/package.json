@@ -56,7 +56,7 @@
 	},
 	"scripts": {
 		"package": "vsce package",
-		"publish": "vsce publish"
+		"deploy": "vsce publish"
 	},
 	"devDependencies": {
 		"@vscode/vsce": "^2.22.0"

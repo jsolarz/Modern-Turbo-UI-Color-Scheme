@@ -11,6 +11,31 @@ A refined take on the classic Turbo Pascal aesthetic with Nord color palette inf
 - Universal token colors across all languages
 - Perfect for long coding sessions
 
+#### Screenshots
+
+<details>
+<summary>Click to view screenshots</summary>
+
+##### JavaScript
+![Nord Turbo Pascal Modern - JavaScript](screenshots/nord-modern-reference.js.png)
+
+##### Python
+![Nord Turbo Pascal Modern - Python](screenshots/nord-modern-reference.py.png)
+
+##### C#
+![Nord Turbo Pascal Modern - Pascal](screenshots/nord-modern-reference.csharp.png)
+
+##### TypeScript React
+![Nord Turbo Pascal Modern - TypeScript React](screenshots/nord-modern-referenceComponent.tsx.png)
+
+##### HTML
+![Nord Turbo Pascal Modern - HTML](screenshots/nord-modern-reference.html.png)
+
+##### CSS
+![Nord Turbo Pascal Modern - CSS](screenshots/nord-modern-reference.css.png)
+
+</details>
+
 ### Borland Turbo Pascal Original
 Authentic recreation of the classic Borland Turbo Pascal 7.0 IDE:
 - Classic dark blue background (#0000AA)
@@ -18,6 +43,32 @@ Authentic recreation of the classic Borland Turbo Pascal 7.0 IDE:
 - Cyan strings and green comments
 - High contrast for maximum readability
 - Pure nostalgia for Turbo Pascal veterans
+
+#### Screenshots
+
+<details>
+<summary>Click to view screenshots</summary>
+
+##### JavaScript
+![Borland Turbo Pascal Original - JavaScript](screenshots/borland-original-reference.js.png)
+
+##### Python
+![Borland Turbo Pascal Original - Python](screenshots/borland-original-reference.py.png)
+
+##### Pascal
+![Borland Turbo Pascal Original - Pascal](screenshots/borland-original-reference.pas.png)
+
+##### TypeScript React
+![Borland Turbo Pascal Original - TypeScript React](screenshots/borland-original-referenceComponent.tsx.png)
+
+##### HTML
+![Borland Turbo Pascal Original - HTML](screenshots/borland-original-reference.html.png)
+
+##### CSS
+![Borland Turbo Pascal Original - CSS](screenshots/borland-original-reference.css.png)
+
+</details>
+
 
 ## 🚀 Installation
 

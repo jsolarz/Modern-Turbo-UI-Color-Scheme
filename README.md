@@ -11,12 +11,64 @@ A modern take on Turbo Pascal with Nord color palette influences. Features:
 - Softened colors for reduced eye strain
 - Universal token colors across languages
 
+#### Screenshots
+
+<details>
+<summary>Click to view screenshots</summary>
+
+##### JavaScript
+![Nord Turbo Pascal Modern - JavaScript](screenshots/nord-modern-reference.js.png)
+
+##### Python
+![Nord Turbo Pascal Modern - Python](screenshots/nord-modern-reference.py.png)
+
+##### Pascal
+![Nord Turbo Pascal Modern - Pascal](screenshots/nord-modern-reference.pas.png)
+
+##### TypeScript React
+![Nord Turbo Pascal Modern - TypeScript React](screenshots/nord-modern-referenceComponent.tsx.png)
+
+##### HTML
+![Nord Turbo Pascal Modern - HTML](screenshots/nord-modern-reference.html.png)
+
+##### CSS
+![Nord Turbo Pascal Modern - CSS](screenshots/nord-modern-reference.css.png)
+
+</details>
+
 ### Borland Turbo Pascal Original
 Authentic recreation of the classic Borland Turbo Pascal IDE colors:
 - Classic dark blue background (#0000AA)
 - Bright syntax highlighting (white keywords, cyan strings, green comments)
 - Original Turbo Pascal 7.0 aesthetic
 - High contrast for nostalgic coding experience
+
+#### Screenshots
+
+<details>
+<summary>Click to view screenshots</summary>
+
+##### JavaScript
+![Borland Turbo Pascal Original - JavaScript](screenshots/borland-original-reference.js.png)
+
+##### Python
+![Borland Turbo Pascal Original - Python](screenshots/borland-original-reference.py.png)
+
+##### Pascal
+![Borland Turbo Pascal Original - Pascal](screenshots/borland-original-reference.pas.png)
+
+##### TypeScript React
+![Borland Turbo Pascal Original - TypeScript React](screenshots/borland-original-referenceComponent.tsx.png)
+
+##### HTML
+![Borland Turbo Pascal Original - HTML](screenshots/borland-original-reference.html.png)
+
+##### CSS
+![Borland Turbo Pascal Original - CSS](screenshots/borland-original-reference.css.png)
+
+</details>
+
+> **Note**: Screenshots are generated from test files in the `testfiles/` directory. To generate your own screenshots, see [scripts/README.md](scripts/README.md) for instructions.
 
 ## 📁 Repository Structure
 
@@ -183,6 +235,29 @@ See `windows-terminal/README.md` for detailed instructions.
 ## 🧪 Testing
 
 Test files are included in the `testfiles/` directory covering various programming languages to validate theme rendering across different syntaxes.
+
+### Generating Screenshots
+
+To generate screenshots for the theme showcase:
+
+1. **Quick Start**: Run the helper script:
+   ```powershell
+   # Windows PowerShell
+   .\scripts\open-for-screenshots.ps1
+   ```
+   ```bash
+   # Linux/Mac
+   node scripts/generate-screenshots.js
+   ```
+
+2. **Manual Steps**:
+   - Open VS Code
+   - Select theme: `Ctrl+Shift+P` → "Color Theme" → Choose theme
+   - Open test files from `testfiles/` directory
+   - Take screenshots and save to `screenshots/` directory
+   - Use naming: `nord-modern-{filename}.png` or `borland-original-{filename}.png`
+
+See [scripts/README.md](scripts/README.md) for detailed instructions.
 
 ## 📝 License
 
