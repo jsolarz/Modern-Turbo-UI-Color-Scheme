@@ -6,7 +6,7 @@ All notable changes to the Modern Turbo Pascal UI extension will be documented i
 
 ### Added
 - Initial release with two theme variants
-- Nord Turbo Pascal Modern theme
+- Turbo Pascal Modern theme
 - Borland Turbo Pascal Original theme
 - Full syntax highlighting support for all languages
 - High contrast design for readability

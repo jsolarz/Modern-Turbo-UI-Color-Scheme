@@ -4,7 +4,7 @@ Nostalgic color themes for VS Code inspired by the classic Borland Turbo Pascal 
 
 ## 🎨 Themes
 
-### Nord Turbo Pascal Modern
+### Turbo Pascal Modern
 A refined take on the classic Turbo Pascal aesthetic with Nord color palette influences:
 - Dark navy background with high contrast
 - Softened colors for reduced eye strain
@@ -17,22 +17,22 @@ A refined take on the classic Turbo Pascal aesthetic with Nord color palette inf
 <summary>Click to view screenshots</summary>
 
 ##### JavaScript
-![Nord Turbo Pascal Modern - JavaScript](screenshots/nord-modern-reference.js.png)
+![Turbo Pascal Modern - JavaScript](screenshots/nord-modern-reference.js.png)
 
 ##### Python
-![Nord Turbo Pascal Modern - Python](screenshots/nord-modern-reference.py.png)
+![Turbo Pascal Modern - Python](screenshots/nord-modern-reference.py.png)
 
 ##### C#
-![Nord Turbo Pascal Modern - Pascal](screenshots/nord-modern-reference.csharp.png)
+![Turbo Pascal Modern - Pascal](screenshots/nord-modern-reference.csharp.png)
 
 ##### TypeScript React
-![Nord Turbo Pascal Modern - TypeScript React](screenshots/nord-modern-referenceComponent.tsx.png)
+![Turbo Pascal Modern - TypeScript React](screenshots/nord-modern-referenceComponent.tsx.png)
 
 ##### HTML
-![Nord Turbo Pascal Modern - HTML](screenshots/nord-modern-reference.html.png)
+![Turbo Pascal Modern - HTML](screenshots/nord-modern-reference.html.png)
 
 ##### CSS
-![Nord Turbo Pascal Modern - CSS](screenshots/nord-modern-reference.css.png)
+![Turbo Pascal Modern - CSS](screenshots/nord-modern-reference.css.png)
 
 </details>
 
@@ -87,7 +87,7 @@ code --install-extension jonathansolarz.modern-turbo-pascal-ui
 1. Open Command Palette (Ctrl+Shift+P / Cmd+Shift+P)
 2. Type "Preferences: Color Theme"
 3. Select either:
-   - **Nord Turbo Pascal Modern**
+   - **Turbo Pascal Modern**
    - **Borland Turbo Pascal Original**
 
 ## 🎯 Features
@@ -100,7 +100,7 @@ code --install-extension jonathansolarz.modern-turbo-pascal-ui
 
 ## 🎨 Color Palette
 
-### Nord Turbo Pascal Modern
+### Turbo Pascal Modern
 - Background: `#252b36` (Dark Navy)
 - Keywords: `#ECEFF4` (White)
 - Identifiers: `#FFD75F` (Yellow)

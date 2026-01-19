@@ -43,7 +43,7 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Nord Turbo Pascal Modern",
+				"label": "Turbo Pascal Modern",
 				"uiTheme": "vs-dark",
 				"path": "./themes/modern-nord-turbo-pascal-theme-color-theme.json"
 			},
