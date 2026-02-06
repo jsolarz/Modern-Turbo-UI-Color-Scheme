@@ -147,7 +147,7 @@
 		"quickInputTitle.background": "#808080",
 		"progressBar.background": "#00FF00",
 		"welcomePage.buttonBackground": "#808080",
-		"welcomePage.buttonHoverBackground": "#A0A0A0",
+		"welcomePage.buttonHoverBackground": "#A0A0A0"
 	},
 	"tokenColors": [
 		{
