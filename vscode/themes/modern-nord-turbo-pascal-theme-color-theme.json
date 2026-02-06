@@ -1,6 +1,6 @@
 {
 	"$schema": "vscode://schemas/color-theme",
-	"name": " Turbo Pascal Modern",
+	"name": "Turbo Pascal Modern",
 	"type": "dark",
 	"colors": {
 		"editor.background": "#252b36",

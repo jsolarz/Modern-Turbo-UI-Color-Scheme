@@ -1,0 +1,2 @@
+# Ensure JSON uses LF so CI (Linux) and local parsers see the same content
+*.json text eol=lf

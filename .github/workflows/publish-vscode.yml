@@ -4,33 +4,50 @@ on:
   push:
     tags:
       - 'v*.*.*'  # Triggers on version tags like v0.1.0, v1.0.0, etc.
-  workflow_dispatch:  # Allows manual triggering from GitHub Actions UI
+  workflow_dispatch:
     inputs:
       version:
         description: 'Version to publish (e.g., 0.1.0)'
         required: true
         type: string
 
+env:
+  RELEASE_DIR: vscode/release
+
 jobs:
   publish:
-    name: Publish to VS Code Marketplace
+    name: Build VSIX and Publish
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: write  # create release and upload assets
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+        with:
+          fetch-depth: 0  # needed for tagging from workflow_dispatch
+
+      - name: Set version from tag
+        if: startsWith(github.ref, 'refs/tags/')
+        working-directory: ./vscode
+        run: npm version ${GITHUB_REF#refs/tags/v} --no-git-tag-version --allow-same-version
+
+      - name: Set version (manual run)
+        if: github.event_name == 'workflow_dispatch'
+        working-directory: ./vscode
+        run: npm version ${{ inputs.version }} --no-git-tag-version --allow-same-version
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
           cache-dependency-path: vscode/package.json
-      
+
       - name: Install dependencies
         working-directory: ./vscode
         run: npm ci
-      
+
       - name: Validate package.json
         working-directory: ./vscode
         run: |
@@ -40,21 +57,44 @@ jobs:
             if (!pkg.name) throw new Error('Missing name field'); \
             if (!pkg.version) throw new Error('Missing version field'); \
             console.log('✓ package.json is valid');"
-      
-      - name: Package extension
+
+      - name: Create release directory
+        run: mkdir -p ${{ env.RELEASE_DIR }}
+
+      - name: Package extension (VSIX)
         working-directory: ./vscode
-        run: npx @vscode/vsce package --out ./modern-turbo-pascal-ui.vsix
-      
+        run: npx @vscode/vsce package --out ./release/
+
       - name: Publish to VS Code Marketplace
-        working-directory: ./vscode
         if: success() && (startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch')
+        working-directory: ./vscode
         run: npm run deploy
         env:
           VSCE_PAT: ${{ secrets.VS_MARKETPLACE_TOKEN }}
-      
+
+      - name: Resolve release tag
+        id: tag
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "tag=v${{ inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "tag=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: Release ${{ steps.tag.outputs.tag }}
+          files: ${{ env.RELEASE_DIR }}/*.vsix
+          generate_release_notes: true
+          draft: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Upload VSIX artifact
         uses: actions/upload-artifact@v4
         with:
           name: extension-vsix
-          path: vscode/*.vsix
+          path: ${{ env.RELEASE_DIR }}/*.vsix
           retention-days: 30

@@ -30,6 +30,7 @@ yarn.lock
 
 # Build outputs
 *.vsix
+vscode/release/
 dist/
 build/
 out/
