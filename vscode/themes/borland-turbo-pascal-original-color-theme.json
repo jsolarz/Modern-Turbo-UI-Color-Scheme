@@ -18,7 +18,7 @@
 		"editorRuler.foreground": "#0000CC",
 		"sideBar.background": "#808080",
 		"sideBar.foreground": "#FFFFFF",
-		"sideBar.border": "#A0A0A0", //A0A0A0
+		"sideBar.border": "#A0A0A0",
 		"sideBarTitle.foreground": "#FFFFFF",
 		"sideBarSectionHeader.background": "#808080",
 		"sideBarSectionHeader.foreground": "#FFFFFF",
