@@ -27,6 +27,8 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 yarn.lock
+# VS Code extension needs lockfile for npm ci in CI
+!vscode/package-lock.json
 
 # Build outputs
 *.vsix
