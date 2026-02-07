@@ -18,7 +18,7 @@
 		"editorRuler.foreground": "#0000CC",
 		"sideBar.background": "#808080",
 		"sideBar.foreground": "#FFFFFF",
-		"sideBar.border": "#A0A0A0", //A0A0A0
+		"sideBar.border": "#A0A0A0",
 		"sideBarTitle.foreground": "#FFFFFF",
 		"sideBarSectionHeader.background": "#808080",
 		"sideBarSectionHeader.foreground": "#FFFFFF",
@@ -147,7 +147,7 @@
 		"quickInputTitle.background": "#808080",
 		"progressBar.background": "#00FF00",
 		"welcomePage.buttonBackground": "#808080",
-		"welcomePage.buttonHoverBackground": "#A0A0A0",
+		"welcomePage.buttonHoverBackground": "#A0A0A0"
 	},
 	"tokenColors": [
 		{
