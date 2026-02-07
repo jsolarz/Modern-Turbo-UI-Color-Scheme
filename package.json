@@ -1,38 +1,45 @@
 {
-  "name": "modern-turbo-pascal-ui",
-  "version": "0.1.0",
-  "description": "A collection of color themes inspired by Borland Turbo Pascal for multiple IDEs and terminals",
-  "keywords": [
-    "theme",
-    "color-scheme",
-    "turbo-pascal",
-    "borland",
-    "nord",
-    "vscode",
-    "jetbrains",
-    "vim",
-    "sublime",
-    "atom",
-    "emacs",
-    "terminal"
-  ],
-  "author": "",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme/issues"
-  },
-  "homepage": "https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme#readme",
-  "scripts": {
-    "validate": "node scripts/validate.js",
-    "format": "prettier --write \"**/*.{json,md,yml,yaml}\"",
-    "format:check": "prettier --check \"**/*.{json,md,yml,yaml}\""
-  },
-  "devDependencies": {},
-  "engines": {
-    "node": ">=14.0.0"
-  }
+	"name": "modern-turbo-pascal-ui",
+	"version": "0.1.2",
+	"description": "A collection of color themes inspired by Borland Turbo Pascal for multiple IDEs and terminals",
+	"keywords": [
+		"theme",
+		"color-scheme",
+		"turbo-pascal",
+		"borland",
+		"nord",
+		"vscode",
+		"jetbrains",
+		"vim",
+		"sublime",
+		"atom",
+		"emacs",
+		"terminal"
+	],
+	"author": "",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme.git"
+	},
+	"bugs": {
+		"url": "https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme/issues"
+	},
+	"homepage": "https://github.com/jsolarz/Modern-Turbo-UI-Color-Scheme#readme",
+	"scripts": {
+		"validate": "node scripts/validate.js",
+		"format": "prettier --write \"**/*.{json,md,yml,yaml}\"",
+		"format:check": "prettier --check \"**/*.{json,md,yml,yaml}\"",
+		"release": "standard-version",
+		"release:patch": "standard-version --release-as patch",
+		"release:minor": "standard-version --release-as minor",
+		"release:major": "standard-version --release-as major",
+		"version:sync": "node scripts/sync-version-to-vscode.js"
+	},
+	"devDependencies": {
+		"standard-version": "^9.5.0"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	}
 }

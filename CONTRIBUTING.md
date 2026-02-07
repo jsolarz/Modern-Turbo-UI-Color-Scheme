@@ -123,6 +123,21 @@ Add error handling to semantic-index.ps1
 - Fixes #123
 ```
 
+## Releasing (semver)
+
+Version is driven from the **root** `package.json`; `vscode/package.json` is kept in sync automatically.
+
+- **Conventional commits** (recommended): use `feat:`, `fix:`, or `BREAKING CHANGE:` in commits. Then run:
+  - `npm run release` — bumps version from commit history (patch/minor/major), updates root + `CHANGELOG.md`, syncs to `vscode/package.json`, commits and tags.
+- **Explicit bump** (no conventional commits):
+  - `npm run release:patch` — 0.1.0 → 0.1.1
+  - `npm run release:minor` — 0.1.0 → 0.2.0
+  - `npm run release:major` — 0.1.0 → 1.0.0  
+  Same as above: root + CHANGELOG + vscode sync, then commit and tag.
+- **Sync only** (e.g. after editing root version by hand): `npm run version:sync` — copies root version into `vscode/package.json`.
+
+After release, push with tags: `git push && git push --tags`. The publish workflow will run on version tags (e.g. `v0.1.1`).
+
 ## Questions?
 
 If you have questions, please open an issue with the "question" label.
