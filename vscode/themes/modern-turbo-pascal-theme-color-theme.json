@@ -18,7 +18,7 @@
 		"editorRuler.foreground": "#0000CC",
 		"sideBar.background": "#232838",
 		"sideBar.foreground": "#ECEFF4",
-		"sideBar.border": "#A0A0A0",
+		"sideBar.border": "#a0a0a0",
 		"sideBarTitle.foreground": "#FFFFFF",
 		"sideBarSectionHeader.background": "#808080",
 		"sideBarSectionHeader.foreground": "#FFFFFF",
@@ -155,49 +155,35 @@
 	"tokenColors": [
 		{
 			"name": "Keywords",
-			"scope": [
-				"keyword",
-				"storage.type",
-				"storage.modifier"
-			],
+			"scope": ["keyword", "storage.type", "storage.modifier"],
 			"settings": {
 				"foreground": "#ECEFF4"
 			}
 		},
 		{
 			"name": "Identifiers",
-			"scope": [
-				"entity.name",
-				"variable",
-				"meta.definition"
-			],
+			"scope": ["entity.name", "variable", "meta.definition"],
 			"settings": {
 				"foreground": "#FFD75F"
 			}
 		},
 		{
 			"name": "Strings",
-			"scope": [
-				"string"
-			],
+			"scope": ["string"],
 			"settings": {
 				"foreground": "#88C0D0"
 			}
 		},
 		{
 			"name": "Numbers",
-			"scope": [
-				"constant.numeric"
-			],
+			"scope": ["constant.numeric"],
 			"settings": {
 				"foreground": "#E5F6FF"
 			}
 		},
 		{
 			"name": "Comments",
-			"scope": [
-				"comment"
-			],
+			"scope": ["comment"],
 			"settings": {
 				"foreground": "#616E88",
 				"fontStyle": "italic"
@@ -205,29 +191,21 @@
 		},
 		{
 			"name": "Directives",
-			"scope": [
-				"meta.preprocessor",
-				"keyword.control.directive"
-			],
+			"scope": ["meta.preprocessor", "keyword.control.directive"],
 			"settings": {
 				"foreground": "#FF5C57"
 			}
 		},
 		{
 			"name": "Assembly",
-			"scope": [
-				"source.asm",
-				"support.constant.asm"
-			],
+			"scope": ["source.asm", "support.constant.asm"],
 			"settings": {
 				"foreground": "#A3E68C"
 			}
 		},
 		{
 			"name": "Symbols",
-			"scope": [
-				"punctuation"
-			],
+			"scope": ["punctuation"],
 			"settings": {
 				"foreground": "#ECEFF4"
 			}

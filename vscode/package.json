@@ -1,8 +1,8 @@
 {
 	"name": "modern-turbo-pascal-ui",
 	"displayName": "Modern Turbo Pascal UI",
-	"description": "Nostalgic Turbo Pascal color themes for VS Code - featuring both the classic Borland Turbo Pascal aesthetic and a modern Nord-inspired variant. High contrast, readable, and perfect for long coding sessions.",
-	"version": "0.1.2",
+	"description": "Nostalgic Turbo Pascal color themes for VS Code - featuring both the classic Borland Turbo Pascal aesthetic and a modern inspired variant. High contrast, readable, and perfect for long coding sessions.",
+	"version": "0.1.3",
 	"publisher": "ionis",
 	"author": {
 		"name": "Jonathan Solarz"
@@ -33,6 +33,8 @@
 		"turbo-pascal",
 		"borland",
 		"nord",
+		"modern",
+		"blue",
 		"dark",
 		"high-contrast",
 		"nostalgic",
@@ -45,7 +47,7 @@
 			{
 				"label": "Turbo Pascal Modern",
 				"uiTheme": "vs-dark",
-				"path": "./themes/modern-nord-turbo-pascal-theme-color-theme.json"
+				"path": "./themes/modern-turbo-pascal-theme-color-theme.json"
 			},
 			{
 				"label": "Borland Turbo Pascal Original",
