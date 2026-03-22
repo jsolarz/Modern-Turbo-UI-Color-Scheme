@@ -5,7 +5,9 @@ Nostalgic color themes for VS Code inspired by the classic Borland Turbo Pascal 
 ## 🎨 Themes
 
 ### Turbo Pascal Modern
+
 A refined take on the classic Turbo Pascal aesthetic with Nord color palette influences:
+
 - Dark navy background with high contrast
 - Softened colors for reduced eye strain
 - Universal token colors across all languages
@@ -13,31 +15,34 @@ A refined take on the classic Turbo Pascal aesthetic with Nord color palette inf
 
 #### Screenshots
 
-<details>
-<summary>Click to view screenshots</summary>
-
 ##### JavaScript
+
 ![Turbo Pascal Modern - JavaScript](screenshots/nord-modern-reference.js.png)
 
 ##### Python
+
 ![Turbo Pascal Modern - Python](screenshots/nord-modern-reference.py.png)
 
-##### C#
+##### C
+
 ![Turbo Pascal Modern - Pascal](screenshots/nord-modern-reference.csharp.png)
 
 ##### TypeScript React
+
 ![Turbo Pascal Modern - TypeScript React](screenshots/nord-modern-referenceComponent.tsx.png)
 
 ##### HTML
+
 ![Turbo Pascal Modern - HTML](screenshots/nord-modern-reference.html.png)
 
 ##### CSS
+
 ![Turbo Pascal Modern - CSS](screenshots/nord-modern-reference.css.png)
 
-</details>
-
 ### Borland Turbo Pascal Original
+
 Authentic recreation of the classic Borland Turbo Pascal 7.0 IDE:
+
 - Classic dark blue background (#0000AA)
 - Bright white keywords
 - Cyan strings and green comments
@@ -46,29 +51,29 @@ Authentic recreation of the classic Borland Turbo Pascal 7.0 IDE:
 
 #### Screenshots
 
-<details>
-<summary>Click to view screenshots</summary>
-
 ##### JavaScript
+
 ![Borland Turbo Pascal Original - JavaScript](screenshots/borland-original-reference.js.png)
 
 ##### Python
+
 ![Borland Turbo Pascal Original - Python](screenshots/borland-original-reference.py.png)
 
 ##### Pascal
+
 ![Borland Turbo Pascal Original - Pascal](screenshots/borland-original-reference.pas.png)
 
 ##### TypeScript React
+
 ![Borland Turbo Pascal Original - TypeScript React](screenshots/borland-original-referenceComponent.tsx.png)
 
 ##### HTML
+
 ![Borland Turbo Pascal Original - HTML](screenshots/borland-original-reference.html.png)
 
 ##### CSS
+
 ![Borland Turbo Pascal Original - CSS](screenshots/borland-original-reference.css.png)
-
-</details>
-
 
 ## 🚀 Installation
 
@@ -78,6 +83,7 @@ Authentic recreation of the classic Borland Turbo Pascal 7.0 IDE:
 4. Click Install
 
 Or install via command line:
+
 ```bash
 code --install-extension jonathansolarz.modern-turbo-pascal-ui
 ```
@@ -101,6 +107,7 @@ code --install-extension jonathansolarz.modern-turbo-pascal-ui
 ## 🎨 Color Palette
 
 ### Turbo Pascal Modern
+
 - Background: `#252b36` (Dark Navy)
 - Keywords: `#ECEFF4` (White)
 - Identifiers: `#FFD75F` (Yellow)
@@ -109,6 +116,7 @@ code --install-extension jonathansolarz.modern-turbo-pascal-ui
 - Numbers: `#E5F6FF` (Light Blue)
 
 ### Borland Turbo Pascal Original
+
 - Background: `#0000AA` (Dark Blue)
 - Keywords: `#FFFFFF` (White)
 - Identifiers: `#AAAAAA` (Light Grey)
