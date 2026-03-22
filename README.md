@@ -11,6 +11,8 @@ A modern take on Turbo Pascal with Nord color palette influences. Features:
 - Softened colors for reduced eye strain
 - Universal token colors across languages
 
+**VS Code:** extended design notes for Turbo Pascal Modern (workbench keys, panel/debug UI, tabs) live in [docs/turbo-pascal-modern-vs-code.md](docs/turbo-pascal-modern-vs-code.md).
+
 #### Screenshots
 
 <details>

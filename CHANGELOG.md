@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- **Turbo Pascal Modern (VS Code)**: Full workbench `colors` schema aligned with Borland theme structure (JSONC + sections); Pascal-oriented `tokenColors`; `semanticTokenColors` recolored to Modern palette. Editor/welcome/gutter surfaces use `#252b36` family instead of accent blue fill; panel `#343C50` vs editor for clear separation; debug console and problems view hues aligned with defined terminal ANSI colors; tab and panel title borders (`tab.border`, `editorGroupHeader.tabsBorder`, `panelTitle.border`, etc.) and stronger `widget.shadow` / `scrollbar.shadow` / `listFilterWidget.shadow` for depth where the API allows.
 - **CI**: JSON validation now accepts JSONC (`//` and `/* */` comments) via `commentjson`, matching VS Code theme files and fixing strict `json.tool` failures on commented themes.
 - **Borland Turbo Pascal Original (VS Code)**: Filled all empty workbench, semantic, and TextMate color entries with the Turbo palette; improved contrast for the title bar, menu bar, dropdown menus (`menu.*`), command center, and overlays versus the sidebar (`#808080`); aligned welcome-page tiles and peek view with the same blue/gray system.
 - **Borland Turbo Pascal Original (VS Code)**: Split main chrome into distinct darker grays — activity bar (`#454545`), file-explorer sidebar (`#5c5c5c` + section headers `#505050`), bottom panel / debug console (`#4e4e4e`); darkened tab row, status bar, title bar, and form controls so less uniform bright gray.

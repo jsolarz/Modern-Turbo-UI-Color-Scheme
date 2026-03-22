@@ -13,6 +13,8 @@ A refined take on the classic Turbo Pascal aesthetic with Nord color palette inf
 - Universal token colors across all languages
 - Perfect for long coding sessions
 
+For a longer design write-up (workbench coverage, panel vs editor, debug console, tab borders, and theme API limits), see [**Turbo Pascal Modern in VS Code**](../docs/turbo-pascal-modern-vs-code.md) in the repo `docs/` folder.
+
 #### Screenshots
 
 ##### JavaScript
