@@ -15,13 +15,36 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Validate JSON files
+      - name: Install JSONC-friendly validator
+        run: pip install --disable-pip-version-check commentjson
+
+      # VS Code themes and some configs use JSONC (// and /* */ comments). stdlib json rejects those.
+      - name: Validate JSON / JSONC files
         run: |
-          echo "Validating JSON files..."
-          find . -name "*.json" -not -path "./node_modules/*" -not -path "./.git/*" | while read file; do
-            echo "Checking $file"
-            python3 -m json.tool "$file" > /dev/null || exit 1
-          done
+          echo "Validating .json files (JSON with optional comments)..."
+          python3 << 'PY'
+          import os
+          import sys
+          import commentjson
+
+          skip_dirs = {".git", "node_modules"}
+          errors = []
+          for root, dirs, files in os.walk("."):
+              dirs[:] = [d for d in dirs if d not in skip_dirs]
+              for name in files:
+                  if not name.endswith(".json"):
+                      continue
+                  path = os.path.join(root, name)
+                  try:
+                      with open(path, encoding="utf-8") as f:
+                          commentjson.load(f)
+                  except Exception as e:
+                      errors.append(f"{path}: {e}")
+          if errors:
+              print("\n".join(errors), file=sys.stderr)
+              sys.exit(1)
+          print("OK")
+          PY
       
       - name: Validate XML files
         run: |

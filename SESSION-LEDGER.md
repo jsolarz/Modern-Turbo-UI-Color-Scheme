@@ -1,5 +1,43 @@
 # Session Ledger
 
+### 2026-03-22 - Commit pending changes
+
+**Timestamp**: 2026-03-22
+
+**User Request**: Commit the changes.
+
+**AI Actions**:
+- Staged `.github/workflows/ci.yml`, `CHANGELOG.md`, `SESSION-LEDGER.md`, `vscode/themes/borland-turbo-pascal-original-color-theme.json`.
+- Single commit on `master` with subject `ci: validate JSONC for theme files; sync Borland theme and docs` (includes CI, CHANGELOG, SESSION-LEDGER, Borland theme JSON).
+
+**Files Modified**:
+- Modified: `SESSION-LEDGER.md` (this entry)
+
+**Context/Notes**:
+- Working tree clean for those paths after commit.
+
+**Status**: Completed
+
+### 2026-03-22 - CI JSON error on Borland theme (comments)
+
+**Timestamp**: 2026-03-22
+
+**User Request**: GitHub build failed with `Expecting property name enclosed in double quotes: line 5 column 2`; asked whether comments can be allowed in the JSON theme file.
+
+**AI Actions**:
+- Explained root cause: `python3 -m json.tool` in `.github/workflows/ci.yml` enforces strict JSON; VS Code themes use JSONC (`//` comments).
+- Replaced CI validation with `pip install commentjson` and a walk that parses all repo `.json` files with `commentjson.load` (JSON + optional comments).
+- Documented in `CHANGELOG.md` under [Unreleased].
+- Verified locally: `commentjson` loads `vscode/themes/borland-turbo-pascal-original-color-theme.json` successfully.
+
+**Files Modified**:
+- Modified: `.github/workflows/ci.yml`, `CHANGELOG.md`, `SESSION-LEDGER.md`
+
+**Context/Notes**:
+- RFC 8259 JSON does not define comments; allowing them is a CI/tooling choice, not a change to the on-disk format for VS Code (which already accepts JSONC).
+
+**Status**: Completed
+
 ### 2026-03-21 - User message "bot"
 
 **Timestamp**: 2026-03-21 (session time; local TZ not captured)
