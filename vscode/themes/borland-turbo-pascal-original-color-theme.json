@@ -750,7 +750,7 @@
 		{
 			"name": "Keywords",
 			"scope": ["keyword", "keyword.control", "keyword.operator"],
-			"settings": { "foreground": "#FFFFFF", "fontStyle": "bold" }
+			"settings": { "foreground": "#FFFFFF" }
 		},
 		{
 			"name": "Variables",
@@ -878,7 +878,7 @@
 
 		// ===== MODIFIERS =====
 		"*.declaration": { "fontStyle": "italic" },
-		"*.definition": { "fontStyle": "bold" },
+		//"*.definition": { "fontStyle": "bold" },
 		"*.readonly": { "foreground": "#C0C0C0" },
 		"*.static": { "foreground": "#BBBBBB" },
 		"*.abstract": { "fontStyle": "italic" },
