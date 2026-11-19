@@ -70,3 +70,97 @@ jobs:
           [ -d "linux-terminal" ] || exit 1
           [ -d "windows-terminal" ] || exit 1
           echo "✓ All required directories present"
+
+  package:
+    name: Package ${{ matrix.label }}
+    needs: validate
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: vscode
+            label: VS Code
+            directory: vscode
+            kind: vsix
+          - id: jetbrains
+            label: JetBrains
+            directory: jetbrains
+            kind: zip
+          - id: vim
+            label: Vim
+            directory: vim
+            kind: zip
+          - id: sublime-text
+            label: Sublime Text
+            directory: sublime-text
+            kind: zip
+          - id: atom
+            label: Atom
+            directory: atom
+            kind: zip
+          - id: emacs
+            label: Emacs
+            directory: emacs
+            kind: zip
+          - id: visual-studio
+            label: Visual Studio
+            directory: visual-studio
+            kind: zip
+          - id: zed
+            label: Zed
+            directory: zed
+            kind: zip
+          - id: linux-terminal
+            label: Linux Terminal
+            directory: linux-terminal
+            kind: zip
+          - id: windows-terminal
+            label: Windows Terminal
+            directory: windows-terminal
+            kind: zip
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        if: matrix.kind == 'vsix'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: vscode/package-lock.json
+
+      - name: Prepare package output directory
+        run: mkdir -p dist/packages
+
+      - name: Package VS Code extension
+        if: matrix.kind == 'vsix'
+        working-directory: vscode
+        run: |
+          npm ci
+          npm run package -- --out ../dist/packages/${{ matrix.id }}.vsix
+
+      - name: Package theme files
+        if: matrix.kind == 'zip'
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZIP_DEFLATED, ZipFile
+
+          source = Path("${{ matrix.directory }}")
+          target = Path("dist/packages/${{ matrix.id }}.zip")
+          with ZipFile(target, "w", ZIP_DEFLATED) as archive:
+              for file in source.rglob("*"):
+                  if file.is_file():
+                      archive.write(file, file.as_posix())
+          PY
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: theme-${{ matrix.id }}
+          path: dist/packages/${{ matrix.id }}.*
+          if-no-files-found: error
+          retention-days: 30
