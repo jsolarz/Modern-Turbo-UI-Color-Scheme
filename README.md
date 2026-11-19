@@ -85,6 +85,7 @@ modern-turbo-ui/
 ├── emacs/               # Emacs themes
 ├── linux-terminal/      # Linux terminal themes
 ├── windows-terminal/    # Windows Terminal themes
+├── zed/                 # Zed color themes
 └── testfiles/           # Test files for theme validation
 ```
 
@@ -124,6 +125,14 @@ code --install-extension *.vsix
 5. Choose either:
    - `Nord-Turbo-Pascal-Modern.vssettings`
    - `Borland-Turbo-Pascal-Original.vssettings`
+
+### Zed
+
+1. Copy `zed/Nord-Turbo-Pascal-Modern.json` to:
+   - Windows: `%USERPROFILE%\AppData\Roaming\Zed\themes\`
+   - macOS/Linux: `~/.config/zed/themes/`
+2. Restart Zed.
+3. Run `theme selector: toggle` (`Ctrl+K Ctrl+T`) and select **Nord Turbo Pascal Modern**.
 
 ### Vim
 

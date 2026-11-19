@@ -2,21 +2,21 @@
 ! Usage: xrdb -merge nord-turbo-pascal-modern.Xresources
 
 ! Background and foreground
-*.background: #252b36
+*.background: #1A1D2A
 *.foreground: #ECEFF4
 
 ! ANSI Colors
-*.color0:  #1A1D2A
+*.color0:  #4C566A
 *.color1:  #FF5C57
 *.color2:  #A3E68C
 *.color3:  #FFD75F
 *.color4:  #88C0D0
 *.color5:  #C27AC0
 *.color6:  #8BE9FD
-*.color7:  #ECEFF4
+*.color7:  #D8DEE9
 
 ! Bright ANSI Colors
-*.color8:  #343C50
+*.color8:  #808080
 *.color9:  #FF7A73
 *.color10: #B4F7A0
 *.color11: #FFE28A
@@ -26,8 +26,8 @@
 *.color15: #FFFFFF
 
 ! Cursor colors
-*.cursorColor: #FFD75F
-*.cursorColor2: #252b36
+*.cursorColor: #FFFFFF
+*.cursorColor2: #0000AA
 
 ! Selection colors
 *.highlightColor: #2E4A7F

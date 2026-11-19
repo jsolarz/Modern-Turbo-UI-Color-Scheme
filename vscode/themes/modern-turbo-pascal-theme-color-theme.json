@@ -740,86 +740,64 @@
 		"problemsView.infoForeground": "#A0F0FF"
 	},
 	"tokenColors": [
-	{
-		"name": "Keywords",
-		"scope": [
-			"keyword",
-			"storage.type",
-			"storage.modifier"
-		],
-		"settings": {
-			"foreground": "#ECEFF4"
+		{
+			"name": "Keywords",
+			"scope": ["keyword", "storage.type", "storage.modifier"],
+			"settings": {
+				"foreground": "#ECEFF4"
+			}
+		},
+		{
+			"name": "Identifiers",
+			"scope": ["entity.name", "variable", "meta.definition"],
+			"settings": {
+				"foreground": "#FFD75F"
+			}
+		},
+		{
+			"name": "Strings",
+			"scope": ["string"],
+			"settings": {
+				"foreground": "#88C0D0"
+			}
+		},
+		{
+			"name": "Numbers",
+			"scope": ["constant.numeric"],
+			"settings": {
+				"foreground": "#E5F6FF"
+			}
+		},
+		{
+			"name": "Comments",
+			"scope": ["comment"],
+			"settings": {
+				"foreground": "#616E88",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Directives",
+			"scope": ["meta.preprocessor", "keyword.control.directive"],
+			"settings": {
+				"foreground": "#FF5C57"
+			}
+		},
+		{
+			"name": "Assembly",
+			"scope": ["source.asm", "support.constant.asm"],
+			"settings": {
+				"foreground": "#A3E68C"
+			}
+		},
+		{
+			"name": "Symbols",
+			"scope": ["punctuation"],
+			"settings": {
+				"foreground": "#ECEFF4"
+			}
 		}
-	},
-	{
-		"name": "Identifiers",
-		"scope": [
-			"entity.name",
-			"variable",
-			"meta.definition"
-		],
-		"settings": {
-			"foreground": "#FFD75F"
-		}
-	},
-	{
-		"name": "Strings",
-		"scope": [
-			"string"
-		],
-		"settings": {
-			"foreground": "#88C0D0"
-		}
-	},
-	{
-		"name": "Numbers",
-		"scope": [
-			"constant.numeric"
-		],
-		"settings": {
-			"foreground": "#E5F6FF"
-		}
-	},
-	{
-		"name": "Comments",
-		"scope": [
-			"comment"
-		],
-		"settings": {
-			"foreground": "#616E88",
-			"fontStyle": "italic"
-		}
-	},
-	{
-		"name": "Directives",
-		"scope": [
-			"meta.preprocessor",
-			"keyword.control.directive"
-		],
-		"settings": {
-			"foreground": "#FF5C57"
-		}
-	},
-	{
-		"name": "Assembly",
-		"scope": [
-			"source.asm",
-			"support.constant.asm"
-		],
-		"settings": {
-			"foreground": "#A3E68C"
-		}
-	},
-	{
-		"name": "Symbols",
-		"scope": [
-			"punctuation"
-		],
-		"settings": {
-			"foreground": "#ECEFF4"
-		}
-	}
-],
+	],
 	// ============================
 	// SEMANTIC TOKEN COLORS
 	// ============================
