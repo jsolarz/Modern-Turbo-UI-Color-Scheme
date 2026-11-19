@@ -21,15 +21,19 @@ hi Search guibg=#5555AA
 hi Keyword guifg=#FFFFFF gui=bold
 hi Identifier guifg=#AAAAAA
 hi String guifg=#00FFFF
+hi Character guifg=#00FFFF
+hi SpecialChar guifg=#55FFFF
 hi Number guifg=#FF00FF
 hi Comment guifg=#00FF00
 hi PreProc guifg=#FF0000
+hi Macro guifg=#FF0000
 hi Operator guifg=#FFFF00
 hi Delimiter guifg=#AAAAAA
 hi Special guifg=#AAAAAA
 hi Constant guifg=#FF00FF
 hi Type guifg=#FFFF00
 hi Function guifg=#FFFF00
+hi Error guifg=#FFFFFF guibg=#AA0000
 
 " UI elements
 hi StatusLine guifg=#FFFFFF guibg=#808080

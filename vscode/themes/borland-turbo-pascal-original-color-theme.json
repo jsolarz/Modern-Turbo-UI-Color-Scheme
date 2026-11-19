@@ -1,7 +1,7 @@
 {
 	"$schema": "vscode://schemas/color-theme",
 	"name": "Borland Turbo Pascal Original",
-	"type": "light",
+	"type": "dark",
 	// ============================
 	// WORKBENCH UI COLORS
 	// ============================
@@ -141,15 +141,15 @@
 		// =========================
 		// ACTIVITY BAR
 		// =========================
-		"activityBar.background": "#454545",
+		"activityBar.background": "#181818",
 		"activityBar.foreground": "#FFFFFF",
 		"activityBar.inactiveForeground": "#B0B0B0",
-		"activityBar.border": "#3a3a3a",
+		"activityBar.border": "#2B2B2B",
 		"activityBar.dropBorder": "#FFFF00",
 		"activityBarBadge.background": "#FF0000",
 		"activityBarBadge.foreground": "#FFFFFF",
 		"activityBar.activeBorder": "#FFFF00",
-		"activityBar.activeBackground": "#505050",
+		"activityBar.activeBackground": "#252526",
 		"activityBar.activeFocusBorder": "#FFFF00",
 
 		// =========================
@@ -161,14 +161,14 @@
 		// =========================
 		// SIDE BAR
 		// =========================
-		"sideBar.background": "#5c5c5c",
+		"sideBar.background": "#181818",
 		"sideBar.foreground": "#FFFFFF",
-		"sideBar.border": "#2a2a2a",
+		"sideBar.border": "#2B2B2B",
 		"sideBar.dropBackground": "#00008880",
 		"sideBarTitle.foreground": "#FFFFFF",
-		"sideBarSectionHeader.background": "#505050",
+		"sideBarSectionHeader.background": "#252526",
 		"sideBarSectionHeader.foreground": "#FFFFFF",
-		"sideBarSectionHeader.border": "#707070",
+		"sideBarSectionHeader.border": "#2B2B2B",
 
 		// =========================
 		// MINIMAP
@@ -194,10 +194,10 @@
 		// =========================
 		"editorGroup.border": "#A0A0A0",
 		"editorGroup.dropBackground": "#00008880",
-		"editorGroupHeader.noTabsBackground": "#565656",
-		"editorGroupHeader.tabsBackground": "#565656",
-		"editorGroupHeader.tabsBorder": "#484848",
-		"editorGroupHeader.border": "#484848",
+		"editorGroupHeader.noTabsBackground": "#252526",
+		"editorGroupHeader.tabsBackground": "#252526",
+		"editorGroupHeader.tabsBorder": "#2B2B2B",
+		"editorGroupHeader.border": "#2B2B2B",
 		"editorGroup.emptyBackground": "#000066",
 		"editorGroup.focusedEmptyBorder": "#FFFF00",
 		"editorGroup.dropIntoPromptForeground": "#FFFFFF",
@@ -206,9 +206,9 @@
 		"tab.unfocusedActiveBackground": "#4848a0",
 		"tab.activeBackground": "#000088",
 		"tab.activeForeground": "#FFFFFF",
-		"tab.inactiveBackground": "#505050",
+		"tab.inactiveBackground": "#252526",
 		"tab.inactiveForeground": "#C0C0C0",
-		"tab.border": "#A0A0A0",
+		"tab.border": "#2B2B2B",
 		"tab.activeBorder": "#FFFF00",
 		"tab.unfocusedActiveBorder": "#A0A0A0",
 		"tab.activeBorderTop": "#FFFF00",
@@ -410,31 +410,31 @@
 		// =========================
 		// PANEL
 		// =========================
-		"panel.background": "#4e4e4e",
-		"panel.border": "#606060",
+		"panel.background": "#181818",
+		"panel.border": "#2B2B2B",
 		"panel.dropBorder": "#FFFF00",
 		"panelTitle.activeForeground": "#FFFFFF",
 		"panelTitle.inactiveForeground": "#C0C0C0",
 		"panelTitle.activeBorder": "#FFFF00",
 		"panelInput.border": "#A0A0A0",
-		"panelSection.border": "#707070",
+		"panelSection.border": "#2B2B2B",
 		"panelSection.dropBackground": "#00008880",
-		"panelSectionHeader.background": "#444444",
+		"panelSectionHeader.background": "#252526",
 		"panelSectionHeader.foreground": "#FFFFFF",
-		"panelSectionHeader.border": "#3a3a3a",
+		"panelSectionHeader.border": "#2B2B2B",
 
 		// =========================
 		// STATUS BAR
 		// =========================
-		"statusBar.background": "#474747",
+		"statusBar.background": "#181818",
 		"statusBar.foreground": "#FFFFFF",
-		"statusBar.border": "#A0A0A0",
+		"statusBar.border": "#2B2B2B",
 		"statusBar.debuggingBackground": "#3d3d3d",
 		"statusBar.debuggingForeground": "#FFFFFF",
 		"statusBar.debuggingBorder": "#FFFF00",
-		"statusBar.noFolderBackground": "#474747",
+		"statusBar.noFolderBackground": "#181818",
 		"statusBar.noFolderForeground": "#FFFFFF",
-		"statusBar.noFolderBorder": "#A0A0A0",
+		"statusBar.noFolderBorder": "#2B2B2B",
 		"statusBarItem.activeBackground": "#4848a0",
 		"statusBarItem.hoverBackground": "#A0A0A0",
 		"statusBarItem.hoverForeground": "#FFFFFF",
@@ -454,11 +454,11 @@
 		// =========================
 		// TITLE BAR
 		// =========================
-		"titleBar.activeBackground": "#525252",
-		"titleBar.activeForeground": "#FFFFFF",
-		"titleBar.inactiveBackground": "#4a4a4a",
+		"titleBar.activeBackground": "#181818",
+		"titleBar.activeForeground": "#CCCCCC",
+		"titleBar.inactiveBackground": "#181818",
 		"titleBar.inactiveForeground": "#C0C0C0",
-		"titleBar.border": "#3d3d3d",
+		"titleBar.border": "#2B2B2B",
 
 		// =========================
 		// MENUS
@@ -748,13 +748,23 @@
 			"settings": { "foreground": "#00FFFF" }
 		},
 		{
+			"name": "String escapes",
+			"scope": ["constant.character.escape", "constant.character.escape.*"],
+			"settings": { "foreground": "#55FFFF" }
+		},
+		{
 			"name": "Keywords",
 			"scope": ["keyword", "keyword.control", "keyword.operator"],
 			"settings": { "foreground": "#FFFFFF" }
 		},
 		{
+			"name": "Constants",
+			"scope": ["constant.numeric", "constant.language", "constant.character", "variable.constant"],
+			"settings": { "foreground": "#FF00FF" }
+		},
+		{
 			"name": "Variables",
-			"scope": ["variable", "variable.other.readwrite"],
+			"scope": ["variable", "variable.other.readwrite", "variable.parameter", "variable.other.property", "variable.other.member"],
 			"settings": { "foreground": "#AAAAAA" }
 		},
 		{
@@ -781,6 +791,16 @@
 			"name": "Attributes",
 			"scope": ["entity.other.attribute-name"],
 			"settings": { "foreground": "#FFAA00" }
+		},
+		{
+			"name": "Directives and macros",
+			"scope": ["meta.preprocessor", "keyword.control.directive", "punctuation.definition.directive", "entity.name.function.preprocessor"],
+			"settings": { "foreground": "#FF0000" }
+		},
+		{
+			"name": "Invalid code",
+			"scope": ["invalid", "invalid.illegal"],
+			"settings": { "foreground": "#FFFFFF", "background": "#AA0000" }
 		}
 	],
 	// ============================
@@ -854,6 +874,7 @@
 		"string.escape": "#55FFFF",
 		"string.regexp": "#FF55FF",
 		"string.special": "#00FFFF",
+		"constant": "#FF00FF",
 
 		// ===== NUMBERS =====
 		"number": "#FF00FF",

@@ -20,9 +20,23 @@
     },
     {
       "name": "Identifiers",
-      "scope": ["entity.name", "variable"],
+      "scope": ["variable", "variable.parameter", "variable.other.property", "variable.other.member"],
       "settings": {
         "foreground": "#AAAAAA"
+      }
+    },
+    {
+      "name": "Functions",
+      "scope": ["entity.name.function", "support.function"],
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "name": "Types",
+      "scope": ["entity.name.type", "entity.name.class", "support.type", "support.class"],
+      "settings": {
+        "foreground": "#FFFF00"
       }
     },
     {
@@ -33,8 +47,22 @@
       }
     },
     {
+      "name": "String escapes",
+      "scope": ["constant.character.escape"],
+      "settings": {
+        "foreground": "#55FFFF"
+      }
+    },
+    {
       "name": "Numbers",
       "scope": ["constant.numeric"],
+      "settings": {
+        "foreground": "#FF00FF"
+      }
+    },
+    {
+      "name": "Constants",
+      "scope": ["constant.language", "constant.character", "variable.constant"],
       "settings": {
         "foreground": "#FF00FF"
       }
@@ -55,9 +83,31 @@
     },
     {
       "name": "Directives",
-      "scope": ["meta.preprocessor", "keyword.control.directive"],
+      "scope": ["meta.preprocessor", "keyword.control.directive", "punctuation.definition.directive", "entity.name.function.preprocessor"],
       "settings": {
         "foreground": "#FF0000"
+      }
+    },
+    {
+      "name": "HTML tags",
+      "scope": ["entity.name.tag", "punctuation.definition.tag"],
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "name": "HTML attributes",
+      "scope": ["entity.other.attribute-name"],
+      "settings": {
+        "foreground": "#FFAA00"
+      }
+    },
+    {
+      "name": "Invalid code",
+      "scope": ["invalid", "invalid.illegal"],
+      "settings": {
+        "foreground": "#FFFFFF",
+        "background": "#AA0000"
       }
     }
   ]

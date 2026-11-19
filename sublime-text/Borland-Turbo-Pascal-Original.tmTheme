@@ -38,9 +38,42 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Identifiers</string>
+			<string>Variables and parameters</string>
 			<key>scope</key>
-			<string>entity.name, variable</string>
+			<string>variable, variable.other, variable.parameter, entity.name.variable</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#AAAAAA</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Functions</string>
+			<key>scope</key>
+			<string>entity.name.function, support.function</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFFF00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Types</string>
+			<key>scope</key>
+			<string>entity.name.type, entity.name.class, support.type, support.class</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFFF00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Properties</string>
+			<key>scope</key>
+			<string>variable.other.property, variable.other.member, entity.name.property</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -71,6 +104,28 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Constants</string>
+			<key>scope</key>
+			<string>constant.language, constant.character, constant.other, variable.constant</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF00FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>String escapes</string>
+			<key>scope</key>
+			<string>constant.character.escape</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#55FFFF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Comments</string>
 			<key>scope</key>
 			<string>comment</string>
@@ -93,13 +148,48 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Directives</string>
+			<string>HTML tags</string>
 			<key>scope</key>
-			<string>meta.preprocessor, keyword.control.directive</string>
+			<string>entity.name.tag, punctuation.definition.tag</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#FF0000</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Attributes</string>
+			<key>scope</key>
+			<string>entity.other.attribute-name</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFAA00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Directives and macros</string>
+			<key>scope</key>
+			<string>meta.preprocessor, keyword.control.directive, punctuation.definition.directive, entity.name.function.preprocessor</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF0000</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Invalid code</string>
+			<key>scope</key>
+			<string>invalid, invalid.illegal</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFFFFF</string>
+				<key>background</key>
+				<string>#AA0000</string>
 			</dict>
 		</dict>
 	</array>

@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="dark light">
+	<title>Turbo Pascal Theme Comparison</title>
+	<style>
+		:root {
+			font-family: "Segoe UI", system-ui, sans-serif;
+			color: #e8ecf3;
+			background: #141821;
+			font-synthesis: none;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			--surface: #1d222d;
+			--border: #343c4b;
+			--muted: #aab3c2;
+			--accent: #ffd75f;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			min-width: 320px;
+		}
+
+		main {
+			width: min(1440px, calc(100% - 40px));
+			margin: 0 auto;
+			padding: 48px 0 64px;
+		}
+
+		header {
+			max-width: 850px;
+			margin-bottom: 32px;
+		}
+
+		.eyebrow {
+			margin: 0 0 10px;
+			color: var(--accent);
+			font-size: 0.78rem;
+			font-weight: 700;
+			letter-spacing: 0.13em;
+			text-transform: uppercase;
+		}
+
+		h1,
+		h2,
+		h3,
+		p {
+			margin-top: 0;
+		}
+
+		h1 {
+			margin-bottom: 12px;
+			font-size: clamp(2rem, 5vw, 3.5rem);
+			letter-spacing: -0.045em;
+			line-height: 1.05;
+		}
+
+		header > p:last-child {
+			margin-bottom: 0;
+			color: var(--muted);
+			font-size: 1.05rem;
+			line-height: 1.65;
+		}
+
+		.section-heading {
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+			gap: 16px;
+			margin: 0 0 14px;
+		}
+
+		.section-heading h2 {
+			margin: 0;
+			font-size: 1.25rem;
+		}
+
+		.section-heading p {
+			margin: 0;
+			color: var(--muted);
+			font-size: 0.85rem;
+		}
+
+		.theme-grid {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 18px;
+		}
+
+		.theme-card {
+			--bg: #000088;
+			--fg: #aaaaaa;
+			--chrome: #454545;
+			--chrome-fg: #ffffff;
+			--kw: #ffffff;
+			--id: #aaaaaa;
+			--type: #ffff00;
+			--function: #ffff00;
+			--constant: #ff00ff;
+			--string: #00ffff;
+			--number: #ff00ff;
+			--comment: #00ff00;
+			--directive: #ff0000;
+			--operator: #ffff00;
+			--selection: #4848a0;
+			--line: #7373a0;
+			min-width: 0;
+			overflow: hidden;
+			border: 1px solid var(--border);
+			border-radius: 12px;
+			background: var(--surface);
+		}
+
+		.theme-card--modern {
+			--bg: #252b36;
+			--fg: #eceff4;
+			--chrome: #1a1d2a;
+			--chrome-fg: #eceff4;
+			--kw: #eceff4;
+			--id: #eceff4;
+			--constant: #d48ad8;
+			--type: #ffd75f;
+			--function: #ffd75f;
+			--string: #88c0d0;
+			--number: #e5f6ff;
+			--comment: #8492a6;
+			--directive: #ff5c57;
+			--operator: #eceff4;
+			--selection: #2e4a7f;
+			--line: #8492a6;
+		}
+
+		.theme-card--original {
+			--chrome: #181818;
+			--chrome-fg: #cccccc;
+		}
+
+		.theme-card--turbo-vim {
+			--bg: #000040;
+			--fg: #ffff00;
+			--chrome: #000020;
+			--chrome-fg: #ffff00;
+			--kw: #ffffff;
+			--id: #008000;
+			--type: #808080;
+			--function: #008000;
+			--string: #8b0000;
+			--number: #8b0000;
+			--comment: #008b8b;
+			--directive: #006400;
+			--operator: #8b0000;
+			--selection: #2050d0;
+			--line: #90f020;
+		}
+
+		.theme-card--borlandp {
+			--bg: #0000aa;
+			--fg: #ffff00;
+			--chrome: #000066;
+			--chrome-fg: #ffffff;
+			--kw: #ffffff;
+			--id: #ffffff;
+			--type: #ffffff;
+			--function: #ffffff;
+			--string: #00ffff;
+			--number: #ff00ff;
+			--comment: #808080;
+			--directive: #008000;
+			--operator: #ffffff;
+			--selection: #008b8b;
+			--line: #0000ff;
+		}
+
+		.theme-card--turbo-c {
+			--bg: #0000aa;
+			--fg: #ffff55;
+			--chrome: #181818;
+			--chrome-fg: #cccccc;
+			--kw: #ffffff;
+			--id: #ffff55;
+			--type: #ffffff;
+			--function: #ffff55;
+			--string: #55ffff;
+			--number: #55ffff;
+			--comment: #aaaaaa;
+			--directive: #55ff55;
+			--operator: #ffff55;
+			--selection: #00aaaa;
+			--line: #55ffff;
+		}
+
+		.card-heading {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 16px;
+			padding: 18px 20px 14px;
+		}
+
+		.card-heading h3 {
+			margin: 0 0 5px;
+			font-size: 1.05rem;
+		}
+
+		.card-heading p {
+			margin: 0;
+			color: var(--muted);
+			font-size: 0.82rem;
+			line-height: 1.45;
+		}
+
+		.kind {
+			flex: 0 0 auto;
+			padding: 5px 8px;
+			border: 1px solid var(--border);
+			border-radius: 999px;
+			color: #d3dae5;
+			font-size: 0.7rem;
+			font-weight: 650;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+		}
+
+		.editor {
+			overflow: hidden;
+			margin: 0 12px;
+			border: 1px solid color-mix(in srgb, var(--fg) 22%, transparent);
+			border-radius: 8px;
+			background: var(--bg);
+			color: var(--fg);
+			font-family: Consolas, "Cascadia Mono", "Courier New", monospace;
+			font-size: 0.82rem;
+			line-height: 1.7;
+		}
+
+		.titlebar {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			min-height: 34px;
+			padding: 0 11px;
+			background: var(--chrome);
+			color: var(--chrome-fg);
+			font-family: "Segoe UI", system-ui, sans-serif;
+			font-size: 0.68rem;
+		}
+
+		.titlebar strong {
+			font-weight: 600;
+		}
+
+		.titlebar span:last-child {
+			opacity: 0.72;
+		}
+
+		.tabbar {
+			display: flex;
+			gap: 1px;
+			padding: 0 9px;
+			background: color-mix(in srgb, var(--chrome) 72%, var(--bg));
+			color: var(--chrome-fg);
+			font-family: "Segoe UI", system-ui, sans-serif;
+			font-size: 0.68rem;
+		}
+
+		.tab {
+			padding: 7px 9px 6px;
+			opacity: 0.7;
+		}
+
+		.tab--active {
+			border-bottom: 2px solid var(--function);
+			opacity: 1;
+		}
+
+		.code {
+			overflow-x: auto;
+			padding: 12px 0 14px;
+		}
+
+		.sample-label {
+			padding: 7px 16px 0;
+			color: var(--line);
+			font-family: "Segoe UI", system-ui, sans-serif;
+			font-size: 0.64rem;
+			font-weight: 650;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+
+		.code--secondary {
+			padding-top: 6px;
+			border-top: 1px solid color-mix(in srgb, var(--fg) 16%, transparent);
+		}
+
+		.line {
+			display: block;
+			min-width: max-content;
+			padding: 0 16px 0 0;
+		}
+
+		.line--selected {
+			background: color-mix(in srgb, var(--selection) 72%, transparent);
+		}
+
+		.ln {
+			display: inline-block;
+			width: 38px;
+			margin-right: 14px;
+			color: var(--line);
+			text-align: right;
+			user-select: none;
+		}
+
+		.kw { color: var(--kw); font-weight: 700; }
+		.id { color: var(--id); }
+		.type { color: var(--type); }
+		.fn { color: var(--function); }
+		.str { color: var(--string); }
+		.num { color: var(--number); }
+		.constant { color: var(--constant); }
+		.comment { color: var(--comment); }
+		.directive { color: var(--directive); }
+		.op { color: var(--operator); }
+		.escape { color: var(--kw); font-weight: 700; }
+		.invalid {
+			padding: 0 2px;
+			background: #aa0000;
+			color: #ffffff;
+		}
+
+		.palette {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 7px;
+			padding: 13px 14px 15px;
+			border-top: 1px solid var(--border);
+		}
+
+		.swatch {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+			padding: 4px 7px 4px 5px;
+			border: 1px solid var(--border);
+			border-radius: 6px;
+			color: #d6dce6;
+			font-size: 0.7rem;
+		}
+
+		.dot {
+			width: 12px;
+			height: 12px;
+			border: 1px solid #ffffff55;
+			border-radius: 3px;
+			background: var(--swatch);
+		}
+
+		.palette .swatch--bg {
+			--swatch: var(--bg);
+		}
+
+		.palette .swatch--kw {
+			--swatch: var(--kw);
+		}
+
+		.palette .swatch--fn {
+			--swatch: var(--function);
+		}
+
+		.palette .swatch--str {
+			--swatch: var(--string);
+		}
+
+		.palette .swatch--num {
+			--swatch: var(--number);
+		}
+
+		.palette .swatch--constant {
+			--swatch: var(--constant);
+		}
+
+		.palette .swatch--comment {
+			--swatch: var(--comment);
+		}
+
+		.palette .swatch--directive {
+			--swatch: var(--directive);
+		}
+
+		.palette .swatch--chrome {
+			--swatch: var(--chrome);
+		}
+
+		.details {
+			margin-top: 36px;
+			padding: 22px;
+			border: 1px solid var(--border);
+			border-radius: 12px;
+			background: var(--surface);
+		}
+
+		.details h2 {
+			margin-bottom: 8px;
+			font-size: 1.2rem;
+		}
+
+		.details > p {
+			margin-bottom: 16px;
+			color: var(--muted);
+			font-size: 0.9rem;
+			line-height: 1.6;
+		}
+
+		.table-wrap {
+			overflow-x: auto;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			font-size: 0.82rem;
+			text-align: left;
+		}
+
+		th,
+		td {
+			padding: 10px 12px;
+			border-bottom: 1px solid var(--border);
+			white-space: nowrap;
+		}
+
+		th {
+			color: #c5ceda;
+			font-size: 0.72rem;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+		}
+
+		td:first-child {
+			color: #d9e0ea;
+			font-weight: 650;
+		}
+
+		code {
+			color: #e7d59c;
+			font-family: Consolas, "Cascadia Mono", "Courier New", monospace;
+			font-size: 0.92em;
+		}
+
+		.note {
+			margin: 18px 0 0;
+			padding: 12px 14px;
+			border-left: 3px solid var(--accent);
+			background: #ffffff08;
+			color: #c4ccd8;
+			font-size: 0.85rem;
+			line-height: 1.6;
+		}
+
+		@media (max-width: 760px) {
+			main {
+				width: min(100% - 24px, 620px);
+				padding-top: 30px;
+			}
+
+			.theme-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.section-heading {
+				align-items: flex-start;
+				flex-direction: column;
+				gap: 5px;
+			}
+
+			.card-heading {
+				padding-right: 14px;
+				padding-left: 14px;
+			}
+
+			.editor {
+				margin-right: 8px;
+				margin-left: 8px;
+				font-size: 0.76rem;
+			}
+
+			.details {
+				padding: 16px;
+			}
+		}
+
+		@media (prefers-reduced-motion: no-preference) {
+			.theme-card {
+				transition: border-color 140ms ease, transform 140ms ease;
+			}
+
+			.theme-card:hover {
+				transform: translateY(-2px);
+				border-color: #68758a;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<p class="eyebrow">Color theme study</p>
+			<h1>Turbo Pascal theme comparison</h1>
+			<p>Compare the repository’s Borland Original and Turbo Pascal Modern palettes with the classic <code>turbo.vim</code>, <code>borlandp.vim</code>, and ZoidCTF’s Borland Turbo C VS Code theme. The C-focused reference uses a C sample; the other cards share a Pascal-like sample to compare syntax roles and editor surfaces.</p>
+		</header>
+
+		<section aria-labelledby="previews-title">
+			<div class="section-heading">
+				<h2 id="previews-title">Editor previews</h2>
+				<p>Current theme palettes alongside the Vim and Turbo C references.</p>
+			</div>
+
+			<div class="theme-grid">
+				<article class="theme-card theme-card--original" aria-labelledby="original-title">
+					<div class="card-heading">
+						<div>
+							<h3 id="original-title">Borland Turbo Pascal Original</h3>
+							<p>Repository VS Code theme · blue editor · bright Borland accents</p>
+						</div>
+						<span class="kind">VS Code</span>
+					</div>
+					<div class="editor editor--original">
+						<div class="titlebar"><strong>PROJECT.PAS</strong><span>Borland Original</span></div>
+						<div class="tabbar"><span class="tab tab--active">PROJECT.PAS</span><span class="tab">UTILS.PAS</span></div>
+						<div class="code" aria-label="Pascal code syntax preview">
+							<span class="line"><span class="ln">1</span><span class="kw">program</span> <span class="id">ThemePreview</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">2</span><span class="kw">uses</span> <span class="type">SysUtils</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">3</span><span class="kw">const</span> <span class="id">Accent</span> <span class="op">=</span> <span class="num">$00AAFF</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">4</span><span class="kw">var</span> <span class="id">Count</span><span class="op">:</span> <span class="type">Integer</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">5</span><span class="comment">{ A comment in the source }</span></span>
+							<span class="line"><span class="ln">6</span><span class="kw">procedure</span> <span class="fn">DrawFrame</span><span class="op">(</span><span class="id">Title</span><span class="op">:</span> <span class="type">string</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">7</span><span class="kw">begin</span></span>
+							<span class="line line--selected"><span class="ln">8</span>  <span class="fn">WriteLn</span><span class="op">(</span><span class="str">'Preview: '</span><span class="op">,</span> <span class="id">Title</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">9</span>  <span class="kw">if</span> <span class="id">Count</span> <span class="op">&gt;</span> <span class="num">0</span> <span class="kw">then</span> <span class="fn">Inc</span><span class="op">(</span><span class="id">Count</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">10</span><span class="kw">end</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">11</span><span class="directive">{$IFDEF DEBUG}</span></span>
+						</div>
+					</div>
+					<div class="palette" aria-label="Borland Original key colors">
+						<span class="swatch swatch--bg"><span class="dot"></span>BG #000088</span>
+						<span class="swatch swatch--kw"><span class="dot"></span>Keyword #FFFFFF</span>
+						<span class="swatch swatch--fn"><span class="dot"></span>Function/type #FFFF00</span>
+						<span class="swatch swatch--str"><span class="dot"></span>String #00FFFF</span>
+						<span class="swatch swatch--num"><span class="dot"></span>Number #FF00FF</span>
+						<span class="swatch swatch--comment"><span class="dot"></span>Comment #00FF00</span>
+						<span class="swatch swatch--directive"><span class="dot"></span>Directive #FF0000</span>
+					</div>
+				</article>
+
+				<article class="theme-card theme-card--modern" aria-labelledby="modern-title">
+					<div class="card-heading">
+						<div>
+							<h3 id="modern-title">Turbo Pascal Modern</h3>
+							<p>Repository VS Code theme · charcoal navy · softened Nord-inspired accents</p>
+						</div>
+						<span class="kind">VS Code</span>
+					</div>
+					<div class="editor">
+						<div class="titlebar"><strong>PROJECT.PAS</strong><span>Turbo Pascal Modern</span></div>
+						<div class="tabbar"><span class="tab tab--active">PROJECT.PAS</span><span class="tab">UTILS.PAS</span></div>
+						<div class="code" aria-label="Pascal code syntax preview">
+							<span class="line"><span class="ln">1</span><span class="kw">program</span> <span class="id">ThemePreview</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">2</span><span class="kw">uses</span> <span class="type">SysUtils</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">3</span><span class="kw">const</span> <span class="id">Accent</span> <span class="op">=</span> <span class="num">$00AAFF</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">4</span><span class="kw">var</span> <span class="id">Count</span><span class="op">:</span> <span class="type">Integer</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">5</span><span class="comment">{ A comment in the source }</span></span>
+							<span class="line"><span class="ln">6</span><span class="kw">procedure</span> <span class="fn">DrawFrame</span><span class="op">(</span><span class="id">Title</span><span class="op">:</span> <span class="type">string</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">7</span><span class="kw">begin</span></span>
+							<span class="line line--selected"><span class="ln">8</span>  <span class="fn">WriteLn</span><span class="op">(</span><span class="str">'Preview: '</span><span class="op">,</span> <span class="id">Title</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">9</span>  <span class="kw">if</span> <span class="id">Count</span> <span class="op">&gt;</span> <span class="num">0</span> <span class="kw">then</span> <span class="fn">Inc</span><span class="op">(</span><span class="id">Count</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">10</span><span class="kw">end</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">11</span><span class="directive">{$IFDEF DEBUG}</span></span>
+						</div>
+					</div>
+					<div class="palette" aria-label="Turbo Pascal Modern key colors">
+						<span class="swatch swatch--bg"><span class="dot"></span>BG #252B36</span>
+						<span class="swatch swatch--kw"><span class="dot"></span>Keyword #ECEFF4</span>
+						<span class="swatch swatch--fn"><span class="dot"></span>Function/type #FFD75F</span>
+						<span class="swatch swatch--constant"><span class="dot"></span>Constant #D48AD8</span>
+						<span class="swatch swatch--str"><span class="dot"></span>String #88C0D0</span>
+						<span class="swatch swatch--num"><span class="dot"></span>Number #E5F6FF</span>
+						<span class="swatch swatch--comment"><span class="dot"></span>Comment #8492A6</span>
+						<span class="swatch swatch--directive"><span class="dot"></span>Directive #FF5C57</span>
+					</div>
+				</article>
+
+				<article class="theme-card theme-card--turbo-vim" aria-labelledby="turbo-vim-title">
+					<div class="card-heading">
+						<div>
+							<h3 id="turbo-vim-title">turbo.vim</h3>
+							<p>Bryant Casteel’s Vim scheme · deep blue · strongly colored identifiers</p>
+						</div>
+						<span class="kind">Vim</span>
+					</div>
+					<div class="editor">
+						<div class="titlebar"><strong>PROJECT.PAS</strong><span>turbo.vim · GUI colors</span></div>
+						<div class="tabbar"><span class="tab tab--active">PROJECT.PAS</span><span class="tab">UTILS.PAS</span></div>
+						<div class="code" aria-label="Pascal code syntax preview">
+							<span class="line"><span class="ln">1</span><span class="kw">program</span> <span class="id">ThemePreview</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">2</span><span class="kw">uses</span> <span class="type">SysUtils</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">3</span><span class="kw">const</span> <span class="id">Accent</span> <span class="op">=</span> <span class="num">$00AAFF</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">4</span><span class="kw">var</span> <span class="id">Count</span><span class="op">:</span> <span class="type">Integer</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">5</span><span class="comment">{ A comment in the source }</span></span>
+							<span class="line"><span class="ln">6</span><span class="kw">procedure</span> <span class="fn">DrawFrame</span><span class="op">(</span><span class="id">Title</span><span class="op">:</span> <span class="type">string</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">7</span><span class="kw">begin</span></span>
+							<span class="line line--selected"><span class="ln">8</span>  <span class="fn">WriteLn</span><span class="op">(</span><span class="str">'Preview: '</span><span class="op">,</span> <span class="id">Title</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">9</span>  <span class="kw">if</span> <span class="id">Count</span> <span class="op">&gt;</span> <span class="num">0</span> <span class="kw">then</span> <span class="fn">Inc</span><span class="op">(</span><span class="id">Count</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">10</span><span class="kw">end</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">11</span><span class="directive">{$IFDEF DEBUG}</span></span>
+						</div>
+					</div>
+					<div class="palette" aria-label="turbo.vim key colors">
+						<span class="swatch swatch--bg"><span class="dot"></span>BG #000040</span>
+						<span class="swatch swatch--kw"><span class="dot"></span>Statement #FFFFFF</span>
+						<span class="swatch swatch--fn"><span class="dot"></span>Identifier #008000</span>
+						<span class="swatch swatch--str"><span class="dot"></span>Constant #8B0000</span>
+						<span class="swatch swatch--num"><span class="dot"></span>Constant #8B0000</span>
+						<span class="swatch swatch--comment"><span class="dot"></span>Comment #008B8B</span>
+						<span class="swatch swatch--directive"><span class="dot"></span>PreProc #006400</span>
+					</div>
+				</article>
+
+				<article class="theme-card theme-card--borlandp" aria-labelledby="borlandp-title">
+					<div class="card-heading">
+						<div>
+							<h3 id="borlandp-title">borlandp.vim</h3>
+							<p>Caglar Toklu’s Vim scheme · classic Borland blue · spare syntax palette</p>
+						</div>
+						<span class="kind">Vim</span>
+					</div>
+					<div class="editor">
+						<div class="titlebar"><strong>PROJECT.PAS</strong><span>borlandp · default background</span></div>
+						<div class="tabbar"><span class="tab tab--active">PROJECT.PAS</span><span class="tab">UTILS.PAS</span></div>
+						<div class="code" aria-label="Pascal code syntax preview">
+							<span class="line"><span class="ln">1</span><span class="kw">program</span> <span class="id">ThemePreview</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">2</span><span class="kw">uses</span> <span class="type">SysUtils</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">3</span><span class="kw">const</span> <span class="id">Accent</span> <span class="op">=</span> <span class="num">$00AAFF</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">4</span><span class="kw">var</span> <span class="id">Count</span><span class="op">:</span> <span class="type">Integer</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">5</span><span class="comment">{ A comment in the source }</span></span>
+							<span class="line"><span class="ln">6</span><span class="kw">procedure</span> <span class="fn">DrawFrame</span><span class="op">(</span><span class="id">Title</span><span class="op">:</span> <span class="type">string</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">7</span><span class="kw">begin</span></span>
+							<span class="line line--selected"><span class="ln">8</span>  <span class="fn">WriteLn</span><span class="op">(</span><span class="str">'Preview: '</span><span class="op">,</span> <span class="id">Title</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">9</span>  <span class="kw">if</span> <span class="id">Count</span> <span class="op">&gt;</span> <span class="num">0</span> <span class="kw">then</span> <span class="fn">Inc</span><span class="op">(</span><span class="id">Count</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">10</span><span class="kw">end</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">11</span><span class="directive">{$IFDEF DEBUG}</span></span>
+						</div>
+					</div>
+					<div class="palette" aria-label="borlandp key colors">
+						<span class="swatch swatch--bg"><span class="dot"></span>BG #0000AA</span>
+						<span class="swatch swatch--kw"><span class="dot"></span>Statement #FFFFFF</span>
+						<span class="swatch swatch--fn"><span class="dot"></span>Identifier/type #FFFFFF</span>
+						<span class="swatch swatch--str"><span class="dot"></span>Special #00FFFF</span>
+						<span class="swatch swatch--num"><span class="dot"></span>Constant #FF00FF</span>
+						<span class="swatch swatch--comment"><span class="dot"></span>Comment #808080</span>
+						<span class="swatch swatch--directive"><span class="dot"></span>PreProc #008000</span>
+					</div>
+				</article>
+
+				<article class="theme-card theme-card--turbo-c" aria-labelledby="turbo-c-title">
+					<div class="card-heading">
+						<div>
+							<h3 id="turbo-c-title">Borland Turbo C</h3>
+							<p>ZoidCTF’s VS Code theme · Turbo C++ 3.x palette · semantic highlighting off</p>
+						</div>
+						<span class="kind">VS Code</span>
+					</div>
+					<div class="editor">
+						<div class="titlebar"><strong>PREVIEW.C</strong><span>Borland Turbo C</span></div>
+						<div class="tabbar"><span class="tab tab--active">PREVIEW.C</span><span class="tab">UTILS.H</span></div>
+						<div class="code" aria-label="C code syntax preview">
+							<span class="line"><span class="ln">1</span><span class="directive">#include &lt;stdio.h&gt;</span></span>
+							<span class="line"><span class="ln">2</span><span class="comment">/* Borland-style C syntax preview */</span></span>
+							<span class="line"><span class="ln">3</span><span class="directive">#define</span> <span class="id">MAX_COUNT</span> <span class="num">10</span></span>
+							<span class="line"><span class="ln">4</span><span class="kw">int</span> <span class="fn">main</span><span class="op">(</span><span class="kw">void</span><span class="op">)</span> <span class="op">{</span></span>
+							<span class="line"><span class="ln">5</span>  <span class="kw">char</span> <span class="id">message</span><span class="op">[] = </span><span class="str">"Hello, Turbo C!"</span><span class="op">;</span></span>
+							<span class="line line--selected"><span class="ln">6</span>  <span class="fn">printf</span><span class="op">(</span><span class="str">"%s %d\n"</span><span class="op">,</span> <span class="id">message</span><span class="op">,</span> <span class="num">42</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">7</span>  <span class="kw">return</span> <span class="num">0</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">8</span><span class="op">}</span></span>
+						</div>
+					</div>
+					<div class="palette" aria-label="Borland Turbo C key colors">
+						<span class="swatch swatch--bg"><span class="dot"></span>BG #0000AA</span>
+						<span class="swatch swatch--kw"><span class="dot"></span>Keyword #FFFFFF</span>
+						<span class="swatch swatch--fn"><span class="dot"></span>Default/identifier #FFFF55</span>
+						<span class="swatch swatch--str"><span class="dot"></span>String #55FFFF</span>
+						<span class="swatch swatch--num"><span class="dot"></span>Number #55FFFF</span>
+						<span class="swatch swatch--comment"><span class="dot"></span>Comment #AAAAAA</span>
+						<span class="swatch swatch--directive"><span class="dot"></span>Preprocessor #55FF55</span>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section aria-labelledby="refinements-title">
+			<div class="section-heading">
+				<h2 id="refinements-title">Updated theme examples</h2>
+				<p>Examples use the updated theme rules; both editor backgrounds are unchanged.</p>
+			</div>
+			<div class="theme-grid">
+				<article class="theme-card theme-card--original" aria-labelledby="original-refined-title">
+					<div class="card-heading">
+						<div>
+							<h3 id="original-refined-title">Borland Original · C#, JavaScript, Python</h3>
+							<p>Dark theme metadata and quieter IDE chrome · existing editor and syntax colors preserved</p>
+						</div>
+						<span class="kind">Updated</span>
+					</div>
+					<div class="editor">
+						<div class="titlebar"><strong>PREVIEW.CS</strong><span>Borland Original · recommended updates</span></div>
+						<div class="tabbar"><span class="tab tab--active">PREVIEW.CS</span><span class="tab">PREVIEW.JS</span><span class="tab">PREVIEW.PY</span></div>
+						<div class="sample-label">C# · property, parameter, constant, directive, invalid code</div>
+						<div class="code" aria-label="Borland Original C sharp syntax example">
+							<span class="line"><span class="ln">1</span><span class="directive">#if DEBUG</span></span>
+							<span class="line"><span class="ln">2</span><span class="kw">public class</span> <span class="type">Frame</span> <span class="op">{</span></span>
+							<span class="line"><span class="ln">3</span>  <span class="kw">public</span> <span class="type">string</span> <span class="id">Caption</span> <span class="op">{</span> <span class="kw">get</span><span class="op">;</span> <span class="kw">set</span><span class="op">;</span> <span class="op">}</span></span>
+							<span class="line"><span class="ln">4</span>  <span class="kw">public</span> <span class="type">void</span> <span class="fn">Draw</span><span class="op">(</span><span class="type">string</span> <span class="id">title</span><span class="op">,</span> <span class="type">int</span> <span class="id">count</span><span class="op">) {</span></span>
+							<span class="line"><span class="ln">5</span>    <span class="kw">const</span> <span class="type">string</span> <span class="constant">format</span> <span class="op">=</span> <span class="str">"Item\t{0}"</span><span class="op">;</span></span>
+							<span class="line line--selected"><span class="ln">6</span>    <span class="fn">Console.WriteLine</span><span class="op">(</span><span class="constant">format</span><span class="op">,</span> <span class="id">title</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">7</span>    <span class="type">int</span> <span class="id">broken</span> <span class="op">=</span> <span class="invalid">;</span></span>
+							<span class="line"><span class="ln">8</span>  <span class="op">}</span></span>
+							<span class="line"><span class="ln">9</span><span class="directive">#endif</span></span>
+						</div>
+						<div class="sample-label">JavaScript · constants, function parameters, escape sequence</div>
+						<div class="code code--secondary" aria-label="Borland Original JavaScript syntax example">
+							<span class="line"><span class="ln">1</span><span class="kw">const</span> <span class="constant">label</span> <span class="op">=</span> <span class="str">"row\n"</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">2</span><span class="kw">function</span> <span class="fn">draw</span><span class="op">(</span><span class="id">title</span><span class="op">,</span> <span class="id">count</span><span class="op">) {</span></span>
+							<span class="line"><span class="ln">3</span>  <span class="kw">return</span> <span class="id">count</span> <span class="op">&gt;</span> <span class="num">0</span> <span class="op">?</span> <span class="constant">label</span> <span class="op">+</span> <span class="id">title</span> <span class="op">:</span> <span class="kw">null</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">4</span>  <span class="kw">const</span> <span class="id">broken</span> <span class="op">=</span> <span class="invalid">;</span></span>
+							<span class="line"><span class="ln">5</span><span class="op">}</span></span>
+						</div>
+						<div class="sample-label">Python · constant, function parameters, escape sequence</div>
+						<div class="code code--secondary" aria-label="Borland Original Python syntax example">
+							<span class="line"><span class="ln">1</span><span class="constant">MAX_COUNT</span> <span class="op">=</span> <span class="num">8</span></span>
+							<span class="line"><span class="ln">2</span><span class="kw">def</span> <span class="fn">draw</span><span class="op">(</span><span class="id">title</span><span class="op">:</span> <span class="type">str</span><span class="op">,</span> <span class="id">count</span><span class="op">:</span> <span class="type">int</span><span class="op">) -&gt; </span><span class="type">str</span><span class="op">:</span></span>
+							<span class="line"><span class="ln">3</span>  <span class="id">label</span> <span class="op">=</span> <span class="str">"row\n"</span></span>
+							<span class="line"><span class="ln">4</span>  <span class="kw">if</span> <span class="id">count</span> <span class="op">&gt;</span> <span class="num">0</span><span class="op">:</span> <span class="kw">return</span> <span class="id">label</span> <span class="op">+</span> <span class="id">title</span></span>
+							<span class="line"><span class="ln">5</span>  <span class="id">broken</span> <span class="op">=</span> <span class="invalid"># invalid expression</span></span>
+						</div>
+					</div>
+					<div class="palette" aria-label="Suggested refined Borland Original colors">
+						<span class="swatch swatch--bg"><span class="dot"></span>Editor #000088</span>
+						<span class="swatch swatch--chrome"><span class="dot"></span>Chrome #181818</span>
+						<span class="swatch swatch--kw"><span class="dot"></span>Keyword #FFFFFF</span>
+						<span class="swatch swatch--fn"><span class="dot"></span>Function/type #FFFF00</span>
+						<span class="swatch swatch--str"><span class="dot"></span>String #00FFFF</span>
+						<span class="swatch swatch--num"><span class="dot"></span>Number #FF00FF</span>
+						<span class="swatch swatch--comment"><span class="dot"></span>Comment #00FF00</span>
+						<span class="swatch swatch--directive"><span class="dot"></span>Directive #FF0000</span>
+					</div>
+					<p class="note"><strong>Metadata:</strong> the Original theme now declares <code>dark</code>. Its editor background and syntax colors are preserved; only IDE chrome was subdued.</p>
+				</article>
+
+				<article class="theme-card theme-card--modern" aria-labelledby="modern-refined-title">
+					<div class="card-heading">
+						<div>
+							<h3 id="modern-refined-title">Turbo Pascal Modern · C#, JavaScript, Python</h3>
+							<p>Same #252B36 background · white variables · gold functions/types · clearer comments</p>
+						</div>
+						<span class="kind">Updated</span>
+					</div>
+					<div class="editor">
+						<div class="titlebar"><strong>PREVIEW.CS</strong><span>Turbo Pascal Modern · recommended updates</span></div>
+						<div class="tabbar"><span class="tab tab--active">PREVIEW.CS</span><span class="tab">PREVIEW.JS</span><span class="tab">PREVIEW.PY</span></div>
+						<div class="sample-label">C# · property, parameter, constant, directive, invalid code</div>
+						<div class="code" aria-label="Turbo Pascal Modern C sharp syntax example">
+							<span class="line"><span class="ln">1</span><span class="directive">#if DEBUG</span></span>
+							<span class="line"><span class="ln">2</span><span class="kw">public class</span> <span class="type">Frame</span> <span class="op">{</span></span>
+							<span class="line"><span class="ln">3</span>  <span class="kw">public</span> <span class="type">string</span> <span class="id">Caption</span> <span class="op">{</span> <span class="kw">get</span><span class="op">;</span> <span class="kw">set</span><span class="op">;</span> <span class="op">}</span></span>
+							<span class="line"><span class="ln">4</span>  <span class="kw">public</span> <span class="type">void</span> <span class="fn">Draw</span><span class="op">(</span><span class="type">string</span> <span class="id">title</span><span class="op">,</span> <span class="type">int</span> <span class="id">count</span><span class="op">) {</span></span>
+							<span class="line"><span class="ln">5</span>    <span class="kw">const</span> <span class="type">string</span> <span class="constant">format</span> <span class="op">=</span> <span class="str">"Item\t{0}"</span><span class="op">;</span></span>
+							<span class="line line--selected"><span class="ln">6</span>    <span class="fn">Console.WriteLine</span><span class="op">(</span><span class="constant">format</span><span class="op">,</span> <span class="id">title</span><span class="op">);</span></span>
+							<span class="line"><span class="ln">7</span>    <span class="type">int</span> <span class="id">broken</span> <span class="op">=</span> <span class="invalid">;</span></span>
+							<span class="line"><span class="ln">8</span>  <span class="op">}</span></span>
+							<span class="line"><span class="ln">9</span><span class="directive">#endif</span></span>
+						</div>
+						<div class="sample-label">JavaScript · constants, function parameters, escape sequence</div>
+						<div class="code code--secondary" aria-label="Turbo Pascal Modern JavaScript syntax example">
+							<span class="line"><span class="ln">1</span><span class="kw">const</span> <span class="constant">label</span> <span class="op">=</span> <span class="str">"row\n"</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">2</span><span class="kw">function</span> <span class="fn">draw</span><span class="op">(</span><span class="id">title</span><span class="op">,</span> <span class="id">count</span><span class="op">) {</span></span>
+							<span class="line"><span class="ln">3</span>  <span class="kw">return</span> <span class="id">count</span> <span class="op">&gt;</span> <span class="num">0</span> <span class="op">?</span> <span class="constant">label</span> <span class="op">+</span> <span class="id">title</span> <span class="op">:</span> <span class="kw">null</span><span class="op">;</span></span>
+							<span class="line"><span class="ln">4</span>  <span class="kw">const</span> <span class="id">broken</span> <span class="op">=</span> <span class="invalid">;</span></span>
+							<span class="line"><span class="ln">5</span><span class="op">}</span></span>
+						</div>
+						<div class="sample-label">Python · constant, function parameters, escape sequence</div>
+						<div class="code code--secondary" aria-label="Turbo Pascal Modern Python syntax example">
+							<span class="line"><span class="ln">1</span><span class="constant">MAX_COUNT</span> <span class="op">=</span> <span class="num">8</span></span>
+							<span class="line"><span class="ln">2</span><span class="kw">def</span> <span class="fn">draw</span><span class="op">(</span><span class="id">title</span><span class="op">:</span> <span class="type">str</span><span class="op">,</span> <span class="id">count</span><span class="op">:</span> <span class="type">int</span><span class="op">) -&gt; </span><span class="type">str</span><span class="op">:</span></span>
+							<span class="line"><span class="ln">3</span>  <span class="id">label</span> <span class="op">=</span> <span class="str">"row\n"</span></span>
+							<span class="line"><span class="ln">4</span>  <span class="kw">if</span> <span class="id">count</span> <span class="op">&gt;</span> <span class="num">0</span><span class="op">:</span> <span class="kw">return</span> <span class="id">label</span> <span class="op">+</span> <span class="id">title</span></span>
+							<span class="line"><span class="ln">5</span>  <span class="id">broken</span> <span class="op">=</span> <span class="invalid"># invalid expression</span></span>
+						</div>
+					</div>
+					<div class="palette" aria-label="Suggested refined Turbo Pascal Modern colors">
+						<span class="swatch swatch--bg"><span class="dot"></span>Editor #252B36</span>
+						<span class="swatch swatch--kw"><span class="dot"></span>Keyword #ECEFF4</span>
+						<span class="swatch swatch--fn"><span class="dot"></span>Function/type #FFD75F</span>
+						<span class="swatch swatch--str"><span class="dot"></span>String #88C0D0</span>
+						<span class="swatch swatch--num"><span class="dot"></span>Number #E5F6FF</span>
+						<span class="swatch swatch--comment"><span class="dot"></span>Comment #8492A6</span>
+						<span class="swatch swatch--directive"><span class="dot"></span>Directive #FF5C57</span>
+						<span class="swatch swatch--constant"><span class="dot"></span>Constant #D48AD8</span>
+						<span class="swatch"><span class="dot" style="--swatch: #ECEFF4"></span>Variable #ECEFF4</span>
+					</div>
+				</article>
+			</div>
+			<p class="note"><strong>What changed:</strong> The Original keeps its editor blue and syntax palette, with corrected dark metadata and quieter IDE chrome. Modern keeps its background while aligning white variables, parameters, and properties with TextMate rules, retaining gold for functions and types, and improving comment and line-number contrast. C#, JavaScript, and Python examples cover properties, parameters, constants, directives, escapes, and invalid code.</p>
+		</section>
+
+		<section class="details" aria-labelledby="palette-title">
+			<h2 id="palette-title">Palette at a glance</h2>
+			<p>Values below reflect explicit theme colors. Named Vim colors are shown using their common GUI approximations; terminal color mappings can vary by terminal.</p>
+			<div class="table-wrap">
+				<table>
+					<thead>
+						<tr>
+							<th scope="col">Theme</th>
+							<th scope="col">Editor background</th>
+							<th scope="col">Normal text</th>
+							<th scope="col">Keyword</th>
+							<th scope="col">Identifier / type</th>
+							<th scope="col">String / special</th>
+							<th scope="col">Number / constant</th>
+							<th scope="col">Comment</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Borland Original</td>
+							<td><code>#000088</code></td>
+							<td><code>#AAAAAA</code></td>
+							<td><code>#FFFFFF</code></td>
+							<td><code>#AAAAAA / #FFFF00</code></td>
+							<td><code>#00FFFF</code></td>
+							<td><code>#FF00FF</code></td>
+							<td><code>#00FF00</code></td>
+						</tr>
+						<tr>
+							<td>Modern</td>
+							<td><code>#252B36</code></td>
+							<td><code>#ECEFF4</code></td>
+							<td><code>#ECEFF4</code></td>
+							<td><code>#ECEFF4 / #FFD75F</code></td>
+							<td><code>#88C0D0</code></td>
+							<td><code>#E5F6FF / #D48AD8</code></td>
+							<td><code>#8492A6</code></td>
+						</tr>
+						<tr>
+							<td>turbo.vim</td>
+							<td><code>#000040</code></td>
+							<td><code>yellow</code></td>
+							<td><code>#FFFFFF</code></td>
+							<td><code>green / gray</code></td>
+							<td><code>darkred</code></td>
+							<td><code>darkred</code></td>
+							<td><code>darkcyan</code></td>
+						</tr>
+						<tr>
+							<td>borlandp.vim</td>
+							<td><code>#0000AA</code></td>
+							<td><code>yellow</code></td>
+							<td><code>#FFFFFF</code></td>
+							<td><code>#FFFFFF</code></td>
+							<td><code>#00FFFF</code></td>
+							<td><code>#FF00FF</code></td>
+							<td><code>gray</code></td>
+						</tr>
+						<tr>
+							<td>Borland Turbo C</td>
+							<td><code>#0000AA</code></td>
+							<td><code>#FFFF55</code></td>
+							<td><code>#FFFFFF</code></td>
+							<td><code>#FFFF55</code></td>
+							<td><code>#55FFFF</code></td>
+							<td><code>#55FFFF</code></td>
+							<td><code>#AAAAAA</code></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="note"><strong>Reading the previews:</strong> VS Code colors are taken from each theme’s TextMate palette. Vim uses syntax highlight groups rather than the same token scopes, so the Vim previews are representative mappings—not a guarantee that every Pascal syntax plugin will assign each token identically. <a href="https://github.com/ZoidCTF/borland-turbo-c-theme">Borland Turbo C</a> intentionally targets C/C++ and disables semantic highlighting to preserve its classic token colors. <code>turbo.vim</code> also defines a darker GUI background than the Borland-blue <code>borlandp.vim</code> default.</p>
+		</section>
+	</main>
+</body>
+</html>

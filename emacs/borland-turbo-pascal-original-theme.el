@@ -17,6 +17,7 @@
  '(font-lock-number-face ((t (:foreground "#FF00FF"))))
  '(font-lock-comment-face ((t (:foreground "#00FF00"))))
  '(font-lock-preprocessor-face ((t (:foreground "#FF0000"))))
+ '(font-lock-builtin-face ((t (:foreground "#FFFFFF"))))
  '(font-lock-function-name-face ((t (:foreground "#FFFF00"))))
  '(font-lock-type-face ((t (:foreground "#FFFF00"))))
  '(font-lock-constant-face ((t (:foreground "#FF00FF"))))
